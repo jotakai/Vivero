@@ -9,6 +9,8 @@ using namespace std;
 
 int main(){
 
+    //se agrego una variable de cada clase para probar el funcionamiento
+
     Persona persona = Persona("Juan", "Perez", 20);
     Planta planta = Planta("Rosa", "Rosa", 2);
     Fecha fecha = Fecha(1, 1, 2000);
