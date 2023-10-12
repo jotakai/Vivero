@@ -30,12 +30,7 @@ int main(){
     cout << "Mes: " << fecha.getMes() << endl;
     cout << "Anio: " << fecha.getAnio() << endl;
 
-    cout << "Nombre: " << cliente.getNombre() << endl;
-    cout << "Apellido: " << cliente.getApellido() << endl;
-    cout << "Edad: " << cliente.getEdad() << endl;
-    cout << "Direccion: " << cliente.getDireccion() << endl;
-    cout << "Telefono: " << cliente.getTelefono() << endl;
-    cout << "Mail: " << cliente.getMail() << endl;
+
 
     
     return 0;
