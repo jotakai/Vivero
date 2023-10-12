@@ -3,10 +3,13 @@
 
 class Direccion{
 private:
+//char _id[]
 int _codigoPostal;
 char _calle [50];
 char _ciudad [50];
 char _provincia[50];
+char _numeroCalle[50];
+
 public:
 
 int getCodigoPostal();
