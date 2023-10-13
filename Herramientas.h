@@ -19,14 +19,14 @@ const char *getNombre() const;
 float getPrecio() const; 
 bool getEstado() const;
 
-    Herramientas(/* args */);
-    ~Herramientas();
+    Herramienta();
+    ~Herramienta();
 };
-
-Herramientas::Herramientas(/* args */)
+Herramienta::Herramienta(/* args */)
 {
 }
 
-Herramientas::~Herramientas()
+Herramienta::~Herramienta()
 {
 }
+
