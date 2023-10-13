@@ -44,3 +44,17 @@ void Planta::setEspecie(std::string especie){
 void Planta::setEdad(int edad){
     _edad = edad;
 }
+void Planta::Cargar(){
+cout<<"Ingrese Nombre = ";
+getline(cin,_nombre);
+cout<<"Ingrese Especie = ";
+getline(cin,_especie);
+cout<<"Ingrese Edad = ";
+cin>>_edad;
+}
+
+void Planta::Mostrar(){
+cout<<"Su Nombre es: "<<_nombre<<endl;
+cout<<"Su Especie es: "<<_especie<<endl;
+cout<<"Su Edad es: "<<_edad<<endl;
+}

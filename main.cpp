@@ -40,7 +40,7 @@ int main(){
     //cout << "Telefono: " << cliente.getTelefono() << endl;
     //cout << "Mail: " << cliente.getMail() << endl;
 
-    Proveedor ClassD("1",2);
+    Planta ClassD("1","3",2);
     ClassD.Mostrar();
     cout<<"///////////////////////"<<endl;
     ClassD.Cargar();

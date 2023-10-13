@@ -7,7 +7,7 @@ private:
     int _id;
     char _nombre[30];
     float _precio;
-    bool _estado;
+    bool _estado=true; //<---- lo cambie a true ---- soy maxivill
 public:
 
 void setId(int); 
@@ -19,8 +19,15 @@ const char *getNombre() const;
 float getPrecio() const; 
 bool getEstado() const;
 
+    void Cargar();
+    void Mostrar();
+
+//constructores
     Herramienta();
     ~Herramienta();
+
+    Herramienta(int id,const char* nombre,float precio,bool estado);
+
 };
 Herramienta::Herramienta(/* args */)
 {

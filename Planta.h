@@ -16,6 +16,9 @@ public:
     void setEspecie(std::string especie);
     void setEdad(int edad);
 
+    void Cargar();
+    void Mostrar();
+
 private:
     std::string _nombre;
     std::string _especie;
