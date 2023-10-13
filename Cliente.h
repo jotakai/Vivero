@@ -17,6 +17,8 @@ public:
     void setTelefono(std::string telefono);
     void setMail(std::string mail);
 
+    void Cargar();
+    void Mostrar();
 
 private:
     std::string _direccion;

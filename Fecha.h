@@ -16,6 +16,9 @@ public:
     void setMes(int mes);
     void setAnio(int anio);
 
+    void Cargar();
+    void Mostrar();
+
 private:
     int _dia;
     int _mes;

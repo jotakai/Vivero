@@ -9,6 +9,16 @@ const char *getNombre() const;
 int getCUIT();
 void setNombre(const char *);
 void setCUIT(int);
+
+void Cargar();
+void Mostrar();
+
+//Constructores
+Empresa();
+Empresa(const char *nombre,int cuit);
+
+
+
 };
 
 

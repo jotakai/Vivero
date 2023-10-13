@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 #include "Persona.h"
 #include "Cliente.h"
-
+#include"FuncionesGlobales.h"
 
 Cliente::Cliente(){
     _direccion = "";
@@ -43,4 +45,24 @@ void Cliente::setTelefono(std::string telefono){
 
 void Cliente::setMail(std::string mail){
     _mail = mail;
+}
+
+void Cliente::Cargar(){
+Persona::Cargar();
+cout<<"Ingrese Direccion = ";
+getline(cin,_direccion);
+cout<<"Ingrese Telefono = ";
+getline(cin,_telefono);
+cout<<"Ingrese Mail = ";
+getline(cin,_mail);
+
+}
+
+
+void Cliente::Mostrar(){
+Persona::Mostrar();
+cout<<"Su Direccion es: "<<_direccion<<endl;
+cout<<"Su Telefono es: "<<_direccion<<endl;
+cout<<"Su Mail es: "<<_mail<<endl;
+
 }

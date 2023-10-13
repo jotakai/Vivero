@@ -5,6 +5,8 @@
 #include "Fecha.h"
 #include "Cliente.h"
 #include "Direccion.h"
+#include "Empresa.h"
+#include "Proveedor.h"
 
 using namespace std;
 
@@ -38,10 +40,12 @@ int main(){
     //cout << "Telefono: " << cliente.getTelefono() << endl;
     //cout << "Mail: " << cliente.getMail() << endl;
 
-    Direccion ClassD;
-
+    Proveedor ClassD("1",2);
+    ClassD.Mostrar();
+    cout<<"///////////////////////"<<endl;
     ClassD.Cargar();
     ClassD.Mostrar();
-    
+
+
     return 0;
 }

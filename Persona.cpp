@@ -1,8 +1,10 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
 
 #include "Persona.h"
+#include"FuncionesGlobales.h"
 
 Persona::Persona(){
     _nombre = "";
@@ -43,4 +45,19 @@ void Persona::setApellido(std::string apellido){
 
 void Persona::setEdad(int edad){
     _edad = edad;
+}
+
+void Persona::Cargar(){
+cout<<"Ingrese Nombre = ";
+getline(cin,_nombre);
+cout<<"Ingrese Apellido= ";
+getline(cin,_apellido);
+cout<<"Ingrese Edad = ";
+cin>>_edad;
+}
+
+void Persona::Mostrar(){
+cout<<"Su Nombre es: "<<_nombre<<endl;
+cout<<"Su Apellido es: "<<_apellido<<endl;
+cout<<"Su Edad es: "<<_edad<<endl;
 }

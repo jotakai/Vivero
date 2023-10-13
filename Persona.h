@@ -18,6 +18,9 @@ public:
     void setApellido(std::string apellido);
     void setEdad(int edad);
 
+    void Cargar();
+    void Mostrar();
+
 
 private:
     std::string _nombre;

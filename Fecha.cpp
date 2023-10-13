@@ -2,6 +2,8 @@
 #include <string>
 #include "Fecha.h"
 
+using namespace std;
+
 Fecha::Fecha(){
     _dia = 0;
     _mes = 0;
@@ -40,4 +42,18 @@ void Fecha::setMes(int mes){
 
 void Fecha::setAnio(int anio){
     _anio = anio;
+}
+void Fecha::Cargar(){
+cout<<"Ingrese DIA= ";
+cin>>_dia;
+cout<<"Ingrese MES= ";
+cin>>_mes;
+cout<<"Ingrese ANIO= ";
+cin>>_anio;
+}
+
+void Fecha::Mostrar(){
+cout<<"Su DIA es: "<<_dia<<endl;
+cout<<"Su MES es: "<<_mes<<endl;
+cout<<"Su ANIO es: "<<_anio<<endl;
 }
