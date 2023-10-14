@@ -1,12 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Persona.h"
-#include "Planta.h"
-#include "Fecha.h"
-#include "Cliente.h"
-#include "Direccion.h"
-#include "Empresa.h"
-#include "Proveedor.h"
+#include"menu.h"
 
 using namespace std;
 
@@ -40,12 +34,12 @@ int main(){
     //cout << "Telefono: " << cliente.getTelefono() << endl;
     //cout << "Mail: " << cliente.getMail() << endl;
 
-    Planta ClassD("1","3",2);
-    ClassD.Mostrar();
-    cout<<"///////////////////////"<<endl;
-    ClassD.Cargar();
-    ClassD.Mostrar();
-
+    //Planta ClassD("1","3",2);
+    //ClassD.Mostrar();
+    //cout<<"///////////////////////"<<endl;
+    //ClassD.Cargar();
+    //ClassD.Mostrar();
+    menu();
 
     return 0;
 }
