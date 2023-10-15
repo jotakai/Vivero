@@ -4,10 +4,11 @@
 class Herramienta
 {
 private:
-    int _id;
+int _id;
+    int _codigoHerramienta;
     char _nombre[30];
     float _precio;
-    bool _estado=true; //<---- lo cambie a true ---- soy maxivill
+    //<---- lo cambie a true ---- soy maxivill
 public:
 
 void setId(int); 

@@ -21,7 +21,9 @@ public:
     void Mostrar();
 
 private:
+    int _id;
     std::string _direccion;
     std::string _telefono;
     std::string _mail;
+char _tipoCliente[1];///para saber si son empresa o persona
 };

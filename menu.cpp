@@ -184,7 +184,9 @@ while(true){
 }
 ///////////////////////////////////////////////////////////////////////////
 void menuEmpresaQueDeseaComprar(int opcion){
-while(true){
+ //Compra c;
+ 
+ while(true){
 
     system("cls");
     cout<<"Opcion 1 ----> Plantas"<<endl;
@@ -197,7 +199,7 @@ while(true){
 /*******************************************************************/
     case 1:{
 
-    menuPlantasCompraEmpresa(opcion);
+    menuPlantasCompraEmpresa(opcion); //,c
     }
         break;
 /*******************************************************************/
@@ -233,6 +235,7 @@ while(true){
     system("cls");
     cout<<"Opcion 1 ----> Plantas"<<endl;
     cout<<"Opcion 2 ----> Herramientas"<<endl;
+    cout<<"Opcion 3 ----> Agroquimicos"<<endl;
     cout<<"Opcion 0 ----> salir"<<endl;
     cin>>opcion;
     system("cls");

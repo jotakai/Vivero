@@ -11,8 +11,8 @@ void menuEmpresaQueDeseaVender(int opcion);// elegir que comprar
 void menuPlantasCompraEmpresa(int opcion);// Comprar
 void menuPlantasVentaEmpresa(int opcion);// Vender
 
-void menuComprarHerramientasEmpresa(int opcion);//❌ Comprar
-void menuVenderHerramientasEmpresa(int opcion);//❌ Vender
+void menuComprarHerramientasEmpresa(int opcion);// Comprar
+void menuVenderHerramientasEmpresa(int opcion);// Vender
 
 
 //PERSONA
