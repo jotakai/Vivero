@@ -2,14 +2,14 @@
 #include "StockPlanta.h"
 
 #include <cstring>
-class ArchivoStock
+class ArchivoStockPlanta
 {
 private:
     char nombre[30];
 
 public:
     void CargarRegistro();
-    ArchivoStock(const char *n);
+    ArchivoStockPlanta(const char *n);
     StockPlanta leerRegistro(int);
     bool grabarRegistro(StockPlanta);
     int contarRegistros();

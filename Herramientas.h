@@ -8,6 +8,7 @@ int _id;
     int _codigoHerramienta;
     char _nombre[30];
     float _precio;
+    
     //<---- lo cambie a true ---- soy maxivill
 public:
 
@@ -30,11 +31,5 @@ bool getEstado() const;
     Herramienta(int id,const char* nombre,float precio,bool estado);
 
 };
-Herramienta::Herramienta(/* args */)
-{
-}
 
-Herramienta::~Herramienta()
-{
-}
 

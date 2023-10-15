@@ -18,4 +18,5 @@ int getID();
 Herramienta getHerramienta();
 int getCapacidad();
 bool getEstado();
+void Mostrar();
 };

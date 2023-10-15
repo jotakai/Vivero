@@ -17,10 +17,7 @@ void Herramienta::setPrecio(float precio)
 {
     _precio=precio;
 }
-void Herramienta::setEstado(bool estado)
-{
-_estado=estado;
-}
+
 int Herramienta::getId() const
 {
 return _id;
@@ -33,9 +30,7 @@ float Herramienta::getPrecio() const
 {
     return _precio;
 } 
-bool Herramienta:: getEstado() const{
-    return _estado;
-}
+
 
 void Herramienta::Cargar(){
 cout<<"Ingrese ID= ";
@@ -54,4 +49,13 @@ cout<<"Su Precio es: "<<_precio<<endl;
 
 Herramienta::Herramienta(int id,const char* nombre,float precio,bool estado){
 
+}
+
+Herramienta::Herramienta(/* args */)
+{
+    _id=_id+1;
+}
+
+Herramienta::~Herramienta()
+{
 }

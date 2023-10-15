@@ -2,12 +2,12 @@
 
 using namespace std;
 
-#include "ArchivoStock.h"
+#include "ArchivoStockPlanta.h"
 
-   ArchivoStock::ArchivoStock(const char *n){
+   ArchivoStockPlanta::ArchivoStockPlanta(const char *n){
         strcpy(nombre, n);
     }
-StockPlanta ArchivoStock::leerRegistro(int pos){
+StockPlanta ArchivoStockPlanta::leerRegistro(int pos){
         StockPlanta reg;
         reg.setEstado(false);
         FILE *p;
@@ -18,7 +18,7 @@ StockPlanta ArchivoStock::leerRegistro(int pos){
         fclose(p);
         return reg;
     }
-   bool ArchivoStock::grabarRegistro(StockPlanta reg)
+   bool ArchivoStockPlanta::grabarRegistro(StockPlanta reg)
    {
     FILE *p = fopen(nombre, "ab");
     if (p == NULL){return false;}
@@ -27,7 +27,7 @@ StockPlanta ArchivoStock::leerRegistro(int pos){
     return pudoEscribir;
 }
 
-    int ArchivoStock::contarRegistros(){
+    int ArchivoStockPlanta::contarRegistros(){
         FILE *p;
         p=fopen(nombre, "rb");
         if(p==NULL) return -1;

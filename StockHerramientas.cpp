@@ -30,3 +30,12 @@ return _capacidad;
 bool StockHerramientas::getEstado(){
 return _estado;
 }
+// void StockHerramientas::Mostrar(){
+
+// cout<<"Capacidad"<< _capacidad <<endl;
+// cout<<""<< <<endl;
+// cout<<""<< <<endl;
+// cout<<""<< <<endl;
+// cout<<""<< <<endl;
+
+// }
