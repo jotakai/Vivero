@@ -62,6 +62,9 @@ system("cls");
 
 
 }
+
+
+//PERSONA
 ///////////////////////////////////////////////////////////////////////////
 void menuPersona(int opcion){
 while(true){
@@ -83,8 +86,7 @@ while(true){
         • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
         • etc
 */
-    cout<<"OPCION 1"<<endl;
-    system("pause");
+    menuPersonaQueDeseaComprar(opcion);
     }
         break;
 /*******************************************************************/
@@ -96,8 +98,7 @@ while(true){
         • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
         • etc
 */
-    cout<<"OPCION 2"<<endl;
-    system("pause");
+    menuPersonaQueDeseaVender(opcion);
     }
         break;
 /*******************************************************************/
@@ -120,6 +121,11 @@ while(true){
 
 }
 }
+///////////////////////////////////////////////////////////////////////////
+
+
+
+//EMPRESA
 ///////////////////////////////////////////////////////////////////////////
 void menuEmpresa(int opcion){
 while(true){
@@ -141,8 +147,7 @@ while(true){
         • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
         • etc
 */
-    cout<<"OPCION 1"<<endl;
-    system("pause");
+    menuEmpresaQueDeseaComprar(opcion);
     }
         break;
 /*******************************************************************/
@@ -154,8 +159,7 @@ while(true){
         • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
         • etc
 */
-    cout<<"OPCION 2"<<endl;
-    system("pause");
+    menuEmpresaQueDeseaVender(opcion);
     }
         break;
 /*******************************************************************/
@@ -179,15 +183,103 @@ while(true){
 }
 }
 ///////////////////////////////////////////////////////////////////////////
-void menuPlantasCompraEmpresa(){ 
-    int opcion; 
+void menuEmpresaQueDeseaComprar(int opcion){
+while(true){
+
+    system("cls");
+    cout<<"Opcion 1 ----> Plantas"<<endl;
+    cout<<"Opcion 2 ----> Herramientas"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion)
+    {
+/*******************************************************************/
+    case 1:{
+
+    menuPlantasCompraEmpresa(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 2:{
+
+    menuComprarHerramientasEmpresa(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+}
+
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuEmpresaQueDeseaVender(int opcion){
+while(true){
+
+    system("cls");
+    cout<<"Opcion 1 ----> Plantas"<<endl;
+    cout<<"Opcion 2 ----> Herramientas"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion)
+    {
+/*******************************************************************/
+    case 1:{
+
+    menuPlantasVentaEmpresa(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 2:{
+
+    menuVenderHerramientasEmpresa(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+}
+
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuPlantasCompraEmpresa(int opcion){ 
     while(true){ 
 
     system("cls");
-    cout<<"Opcion 1 ---->DETALLE PLANTAS X NOMB "<<endl;
-    cout<<"Opcion 2 ----> LISTAR CANTIDAD STOCK X y PLANTA"<<endl; //POR ID
-    cout<<"Opcion 3 ----> Cual Planta quiere y Mostraremos SU Precio y Stock"<<endl; //hacer otro MENU ❌
+    cout<<"Opcion 1 ----> DETALLE TODAS LAS PLANTAS,PRECIO,STOCK "<<endl; //POR ID
+    cout<<"Opcion 2 ----> Cual Planta quiere y Mostraremos SU Precio y Stock"<<endl; //hacer otro MENU ❌
+    cout<<"Opcion 3 ----> SELECCIONE PLANTA QUE QUIERE COMPRAR "<<endl;//hacer otro MENU ❌
     cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    /*al salir si realizaste una compra que cambia el IMPORTE se guarda, si no no se guarda*/
     cin>>opcion;
     system("cls");
 switch (opcion)
@@ -197,7 +289,6 @@ switch (opcion)
         system("cls");
         cout<<"Opcion 1"<<endl;
         system("pause");
-        return;
     }
     break;
 /*******************************************************************/
@@ -205,7 +296,13 @@ switch (opcion)
         system("cls");
         cout<<"Opcion 2"<<endl;
         system("pause");
-        return;
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
     }
     break;
 /*******************************************************************/
@@ -234,8 +331,7 @@ void menuPlantasVentaEmpresa(int opcion){
     while(true){ 
 
     system("cls");
-    cout<<"Opcion 1 ----> LISTAR TODAS LAS PLANTAS,PRECIO,STOCK"<<endl;
-    cout<<"Opcion 1 ----> LISTAR CANTIDAD STOCK X ARTICULO"<<endl; //POR ID
+    cout<<"Opcion 1 ----> LISTAR TODAS LAS PLANTAS,PRECIO,STOCK"<<endl;  //POR ID
     cout<<"Opcion 2 ----> BUSCAR PLANTA QUE QUIERE COMPRAR "<<endl;
     cout<<"Opcion 3 ----> BUSCAR PRECIO X ARTICULO"<<endl; //BUSCAR Articulo Planta,Herramientas,etc
     cout<<"Opcion 4 ----> VENDER POR LOS ARTICULO SELECCIONADOS"<<endl; //VENDE Articulo Planta,Herramientas,etc
@@ -249,7 +345,6 @@ switch (opcion)
         system("cls");
         cout<<"Opcion 1"<<endl;
         system("pause");
-        return;
     }
     break;
 /*******************************************************************/
@@ -257,7 +352,20 @@ switch (opcion)
         system("cls");
         cout<<"Opcion 2"<<endl;
         system("pause");
-        return;
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
     }
     break;
 /*******************************************************************/
@@ -281,4 +389,470 @@ switch (opcion)
  
 }
 }
+///////////////////////////////////////////////////////////////////////////
+void menuComprarHerramientasEmpresa(int opcion){
+    while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> DETALLE TODAS LAS HERRAMIENTAS,PRECIO,STOCK "<<endl; //hacer otro MENU ❌
+    cout<<"Opcion 2 ----> Cual HERRAMIENTAS quiere y Mostraremos SU Precio y Stock"<<endl;
+    cout<<"Opcion 3 ----> BUSCAR HERRAMIENTAS QUE QUIERE COMPRAR"<<endl;
+    cout<<"Opcion 4 ----> COMPRAR LOS ARTICULO SELECCIONADOS"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    /*al salir si realizaste una compra que cambia el IMPORTE se guarda, si no no se guarda*/
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuVenderHerramientasEmpresa(int opcion){
+while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> LISTAR TODAS LAS HERRAMIENTAS,PRECIO,STOCK"<<endl;  //POR ID
+    cout<<"Opcion 2 ----> BUSCAR HERRAMIENTAS QUE QUIERE COMPRAR "<<endl;
+    cout<<"Opcion 3 ----> BUSCAR PRECIO X ARTICULO"<<endl; //BUSCAR Articulo Planta,Herramientas,etc
+    cout<<"Opcion 4 ----> VENDER POR LOS ARTICULO SELECCIONADOS"<<endl; //VENDE Articulo Planta,Herramientas,etc
+    cout<<"Opcion 0 ----> SALIR"<<endl;//--> Salir a Menu Principal
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+
+//Persona
+///////////////////////////////////////////////////////////////////////////
+void menuPersonaQueDeseaComprar(int opcion){
+while(true){
+
+    system("cls");
+    cout<<"Opcion 1 ----> Plantas"<<endl;
+    cout<<"Opcion 2 ----> Herramientas"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion)
+    {
+/*******************************************************************/
+    case 1:{
+
+    menuPlantasCompraPersona(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 2:{
+
+    menuHerramientasCompraPersona(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+}
+
+}
+}
+/////////////////////////////////////////////////////////////////////////// 🧡
+void menuPersonaQueDeseaVender(int opcion){
+while(true){
+
+    system("cls");
+    cout<<"Opcion 1 ----> Plantas"<<endl;
+    cout<<"Opcion 2 ----> Herramientas"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion)
+    {
+/*******************************************************************/
+    case 1:{
+
+    menuPlantasVentaPersona(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 2:{
+
+    menuHerramientasVentaPersona(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+}
+
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuPlantasCompraPersona(int opcion){
+    while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> DETALLE TODAS LAS PLANTAS,PRECIO,STOCK "<<endl; //POR ID
+    cout<<"Opcion 2 ----> Cual Planta quiere y Mostraremos SU Precio y Stock"<<endl; //hacer otro MENU ❌
+    cout<<"Opcion 3 ----> SELECCIONE PLANTA QUE QUIERE COMPRAR "<<endl;//hacer otro MENU ❌
+    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    /*al salir si realizaste una compra que cambia el IMPORTE se guarda, si no no se guarda*/
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuPlantasVentaPersona(int opcion){
+    while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> LISTAR TODAS LAS PLANTAS,PRECIO,STOCK"<<endl;  //POR ID
+    cout<<"Opcion 2 ----> BUSCAR PLANTA QUE QUIERE COMPRAR "<<endl;
+    cout<<"Opcion 3 ----> BUSCAR PRECIO X ARTICULO"<<endl; //BUSCAR Articulo Planta,Herramientas,etc
+    cout<<"Opcion 4 ----> VENDER POR LOS ARTICULO SELECCIONADOS"<<endl; //VENDE Articulo Planta,Herramientas,etc
+    cout<<"Opcion 0 ----> SALIR"<<endl;//--> Salir a Menu Principal
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuHerramientasCompraPersona(int opcion){
+    while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> DETALLE TODAS LAS HERRAMIENTAS,PRECIO,STOCK "<<endl; //hacer otro MENU ❌
+    cout<<"Opcion 2 ----> Cual HERRAMIENTAS quiere y Mostraremos SU Precio y Stock"<<endl;
+    cout<<"Opcion 3 ----> BUSCAR HERRAMIENTAS QUE QUIERE COMPRAR"<<endl;
+    cout<<"Opcion 4 ----> COMPRAR LOS ARTICULO SELECCIONADOS"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    /*al salir si realizaste una compra que cambia el IMPORTE se guarda, si no no se guarda*/
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void menuHerramientasVentaPersona(int opcion){
+while(true){ 
+
+    system("cls");
+    cout<<"Opcion 1 ----> LISTAR TODAS LAS HERRAMIENTAS,PRECIO,STOCK"<<endl;  //POR ID
+    cout<<"Opcion 2 ----> BUSCAR HERRAMIENTAS QUE QUIERE COMPRAR "<<endl;
+    cout<<"Opcion 3 ----> BUSCAR PRECIO X ARTICULO"<<endl; //BUSCAR Articulo Planta,Herramientas,etc
+    cout<<"Opcion 4 ----> VENDER POR LOS ARTICULO SELECCIONADOS"<<endl; //VENDE Articulo Planta,Herramientas,etc
+    cout<<"Opcion 0 ----> SALIR"<<endl;//--> Salir a Menu Principal
+    cin>>opcion;
+    system("cls");
+switch (opcion)
+{
+/*******************************************************************/
+    case 1:{
+        system("cls");
+        cout<<"Opcion 1"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 2:{
+        system("cls");
+        cout<<"Opcion 2"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        system("cls");
+        cout<<"Opcion 3"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 4:{
+        system("cls");
+        cout<<"Opcion 4"<<endl;
+        system("pause");
+    }
+    break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+
+}
+ 
+}
+}
+///////////////////////////////////////////////////////////////////////////
+
 ///////////////////////////////////////////////////////////////////////////
