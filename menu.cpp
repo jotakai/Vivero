@@ -10,6 +10,7 @@ using namespace std;
 #include "Direccion.h"
 #include "Empresa.h"
 #include "Proveedor.h"
+#include "ArchivoStock.h"
 #include"menu.h"
 
 ///////////////////////////////////////////////////////////////////////////

@@ -14,13 +14,14 @@ public:
 
     void setNombre(std::string nombre);
     void setEspecie(std::string especie);
-    void setEdad(int edad);
-
+    void setPrecio(float);
+float getPrecio();
     void Cargar();
     void Mostrar();
 
 private:
+int _codigoPlanta;
     std::string _nombre;
     std::string _especie;
-    int _edad;
+    float _precio;
 };
