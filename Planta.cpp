@@ -7,7 +7,7 @@ using namespace std;
 Planta::Planta(){
     _nombre = "";
     _especie = "";
-    _codigoPlanta=0;
+    _codigoPlanta=-1;
     
 }
 
@@ -58,7 +58,7 @@ cout<<"Ingrese Nombre = ";
 getline(cin,_nombre);
 cout<<"Ingrese Especie = ";
 getline(cin,_especie);
-_codigoPlanta=codigoPlanta+1;
+_codigoPlanta++;
 
 }
 

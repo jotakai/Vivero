@@ -27,10 +27,7 @@ StockPlanta ArchivoStock::leerRegistro(int pos){
     return pudoEscribir;
 }
 
-
-
-
-     int ArchivoStock::contarRegistros(){
+    int ArchivoStock::contarRegistros(){
         FILE *p;
         p=fopen(nombre, "rb");
         if(p==NULL) return -1;

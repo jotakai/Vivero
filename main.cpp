@@ -40,5 +40,15 @@ int main(){
 
     menuPrincipal();
 
+/*
+Win + .
+Emogis utilizados
+
+❌❎
+👌✅
+
+
+*/
+
     return 0;
 }
