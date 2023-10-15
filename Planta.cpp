@@ -7,14 +7,15 @@ using namespace std;
 Planta::Planta(){
     _nombre = "";
     _especie = "";
-    _edad = 0;
+    _codigoPlanta=0;
+    
 }
 
-Planta::Planta(std::string nombre, std::string especie, int edad)
+Planta::Planta(std::string nombre, std::string especie)
 {
     _nombre = nombre;
     _especie = especie;
-    _edad = edad;
+   
 }
 
 Planta::~Planta(){
@@ -29,9 +30,7 @@ std::string Planta::getEspecie(){
     return _especie;
 }
 
-int Planta::getEdad(){
-    return _edad;
-}
+
 
 void Planta::setNombre(std::string nombre){
     _nombre = nombre;
@@ -40,22 +39,31 @@ void Planta::setNombre(std::string nombre){
 void Planta::setEspecie(std::string especie){
     _especie = especie;
 }
-
-void Planta::setEdad(int edad){
-    _edad = edad;
+void Planta::setPrecio(float precio){
+_precio=precio;
 }
+float Planta::getPrecio(){
+return _precio;
+}
+void Planta::setCodigoPlanta(float codigoPlanta){
+_codigoPlanta=codigoPlanta;
+}
+float Planta::getCodigoPlanta(){
+return _codigoPlanta;
+}
+
 void Planta::Cargar(){
 cin.ignore();
 cout<<"Ingrese Nombre = ";
 getline(cin,_nombre);
 cout<<"Ingrese Especie = ";
 getline(cin,_especie);
-cout<<"Ingrese Edad = ";
-cin>>_edad;
+_codigoPlanta=codigoPlanta+1;
+
 }
 
 void Planta::Mostrar(){
 cout<<"Su Nombre es: "<<_nombre<<endl;
 cout<<"Su Especie es: "<<_especie<<endl;
-cout<<"Su Edad es: "<<_edad<<endl;
+
 }
