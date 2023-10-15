@@ -45,6 +45,7 @@ void Planta::setEdad(int edad){
     _edad = edad;
 }
 void Planta::Cargar(){
+cin.ignore();
 cout<<"Ingrese Nombre = ";
 getline(cin,_nombre);
 cout<<"Ingrese Especie = ";

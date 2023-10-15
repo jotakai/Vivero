@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
-#include"menu.h"
+
 
 using namespace std;
 
+#include"menu.h"
 int main(){
 
     //se agrego una variable de cada clase para probar el funcionamiento
@@ -34,12 +35,10 @@ int main(){
     //cout << "Telefono: " << cliente.getTelefono() << endl;
     //cout << "Mail: " << cliente.getMail() << endl;
 
-    //Planta ClassD("1","3",2);
-    //ClassD.Mostrar();
-    //cout<<"///////////////////////"<<endl;
-    //ClassD.Cargar();
-    //ClassD.Mostrar();
-    menu();
+
+
+
+    menuPrincipal();
 
     return 0;
 }

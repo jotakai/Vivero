@@ -1,3 +1,7 @@
 #pragma once
 
-void menu();
+void menuPrincipal();
+
+void menuEmpresa(int opcion);
+
+void menuPlantasCompraEmpresa();
