@@ -898,8 +898,12 @@ if(band==1){
     while(true){
     system("cls");
     cout<<"BIENVENIDO DUENIO"<<endl;
-    cout<<"Opcion 1 ----> Cargar Datos"<<endl;
-    cout<<"Opcion 2 ----> Modificar Datos"<<endl;
+    cout<<"Opcion 1 ----> Cargar Datos"<<endl; //'ab' de archivos
+    cout<<"Opcion 2 ----> Modificar Datos"<<endl;//'rb' que lo lea y modifique
+    cout<<"Opcion 3 ----> Borrar o Limpiar Datos"<<endl; //'wb' de archivos == 'baja Fisica'
+    //cout<<"Opcion  ----> dar de baja algun Productos"<<endl; //bool para dar de 'basa logica'
+    cout<<"Opcion 4 ----> Listar Datos"<<endl; //seleccionar el archivo que quieres que abra y muestre
+    cout<<"Opcion 5 ----> Contar Registros de algun Producto"<<endl;//Cuenta todos los registros dentro del bloc de notas
     cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
     cin>>opcion;
     system("cls");
@@ -908,14 +912,35 @@ if(band==1){
         /*******************************************************************/
             case 1:{
                 system("cls");
-                cout<<"OPCION 1"<<endl;
+                CargarDatos(opcion);
                 system("pause");
             }
                 break;
         /*******************************************************************/
             case 2:{
                 system("cls");
-                cout<<"OPCION 2"<<endl;
+                ModificarDatos(opcion);
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 3:{
+                system("cls");
+                LimpiarDatos(opcion);
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 4:{
+                system("cls");
+                ListarDatos(opcion);
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 5:{
+                system("cls");
+                ContarRegistros(opcion);
                 system("pause");
             }
                 break;
@@ -941,4 +966,80 @@ if(band==1){
 
 }
 
+///////////////////////////////////////////////////////////////////////////
+void CargarDatos(int opcion){
+system("cls");
+
+while(true){
+    system("cls");
+    cout<<"Que quieres Cargar?"<<endl<<endl;
+    cout<<"Opcion 1 ---> Plantas"<<endl; //Crear funcion que carge plantas a un Archivos
+    cout<<"Opcion 2 ---> Herramientas"<<endl; //Crear funcion que carge Herramientas a un Archivos
+    cout<<"Opcion 3 ---> Agro Quimicos"<<endl; //Crear funcion que carge Agro Quimicos a un Archivos
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion){
+    /*******************************************************************/
+    case 1:{
+            system("cls");
+            cout<<"OPCION 1"<<endl;
+            system("pause");
+        //ARMAR UNA FUNCION QUE PERMITA CARGAR EN ARCHIVO Planta
+        // Planta ob1;
+        // ob1.Cargar();
+    }
+        break;
+    /*******************************************************************/
+    case 2:{
+            system("cls");
+            cout<<"OPCION 2"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+    case 3:{
+            system("cls");
+            cout<<"OPCION 3"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+        case 0:{
+            system("cls");
+            cout<<"Saliste"<<endl;
+            system("pause");
+            return;
+        }
+        break;
+    /*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+    /*******************************************************************/
+
+}
+
+
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void ModificarDatos(int opcion){
+
+}
+///////////////////////////////////////////////////////////////////////////
+void LimpiarDatos(int opcion){
+
+}
+///////////////////////////////////////////////////////////////////////////
+void ListarDatos(int opcion){
+
+}
+///////////////////////////////////////////////////////////////////////////
+void ContarRegistros(int opcion){
+
+}
 ///////////////////////////////////////////////////////////////////////////

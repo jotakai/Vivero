@@ -19,6 +19,8 @@ public:
     float getCodigoPlanta();     //
     void Cargar();
     void Mostrar();
+    //Crear una funcion donde puedar Cargar y se almacene en un archivo "Planta.dat"
+    
 
 private:
     int _codigoPlanta;
