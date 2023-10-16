@@ -22,7 +22,7 @@ public:
 
 private:
     int _codigoPlanta;
-char _nombre[30];
+    char _nombre[30];
     char  _especie [30];
     float _precio;
 };

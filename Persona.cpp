@@ -12,8 +12,7 @@ Persona::Persona(){
     _edad = 0;
 }
 
-Persona::Persona(std::string nombre, std::string apellido, int edad)
-{
+Persona::Persona(std::string nombre, std::string apellido, int edad){
     _nombre = nombre;
     _apellido = apellido;
     _edad = edad;
@@ -48,16 +47,16 @@ void Persona::setEdad(int edad){
 }
 
 void Persona::Cargar(){
-cout<<"Ingrese Nombre = ";
-getline(cin,_nombre);
-cout<<"Ingrese Apellido= ";
-getline(cin,_apellido);
-cout<<"Ingrese Edad = ";
-cin>>_edad;
+    cout<<"Ingrese Nombre = ";
+    getline(cin,_nombre);
+    cout<<"Ingrese Apellido= ";
+    getline(cin,_apellido);
+    cout<<"Ingrese Edad = ";
+    cin>>_edad;
 }
 
 void Persona::Mostrar(){
-cout<<"Su Nombre es: "<<_nombre<<endl;
-cout<<"Su Apellido es: "<<_apellido<<endl;
-cout<<"Su Edad es: "<<_edad<<endl;
+    cout<<"Su Nombre es: "<<_nombre<<endl;
+    cout<<"Su Apellido es: "<<_apellido<<endl;
+    cout<<"Su Edad es: "<<_edad<<endl;
 }

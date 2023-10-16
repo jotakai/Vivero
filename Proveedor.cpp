@@ -9,34 +9,37 @@ using namespace std;
 #include"FuncionesGlobales.h"
 
 const char * Proveedor::getID(){
-return _id;
+    return _id;
 }
+
 void Proveedor:: setID (const char *id)
 {
     strcpy(_id,id);
 }
+
 int Proveedor::getcuit(){
-return _cuit;
+    return _cuit;
 }
+
 void Proveedor::setcuit (int cuit){
     _cuit=cuit;
 }
 
 void Proveedor::Cargar(){
-cout<<"Ingrese ID= ";
-cargarCadena(_id,50);
-cout<<"Ingrese Cuit= ";
-cin>>_cuit;
+    cout<<"Ingrese ID= ";
+    cargarCadena(_id,50);
+    cout<<"Ingrese Cuit= ";
+    cin>>_cuit;
 }
 void Proveedor::Mostrar(){
-cout<<"Su ID es: "<<_id<<endl;
-cout<<"Su Cuit es: "<<_cuit<<endl;
+    cout<<"Su ID es: "<<_id<<endl;
+    cout<<"Su Cuit es: "<<_cuit<<endl;
 }
 Proveedor::Proveedor(){
 
 }
 
 Proveedor::Proveedor(const char *id,int cuit){
-setID(id);
-setcuit(cuit);
+    setID(id);
+    setcuit(cuit);
 }

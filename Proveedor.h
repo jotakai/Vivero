@@ -4,21 +4,21 @@
 
 class Proveedor : public Persona{
 
-private:
-char _id[50];
-int _cuit;
-public:
+    private:
+        char _id[50];
+        int _cuit;
 
-const char * getID();
-void setID (const char *);
-int  getcuit();
-void setcuit (int);
+    public:
+        const char * getID();
+        void setID (const char *);
+        int  getcuit();
+        void setcuit (int);
 
-void Cargar();
-void Mostrar();
+        void Cargar();
+        void Mostrar();
 
-//Construcctores
-Proveedor();
-Proveedor(const char *id,int cuit);
+    //Construcctores
+    Proveedor();
+    Proveedor(const char *id,int cuit);
 
 };

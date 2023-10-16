@@ -6,33 +6,31 @@ using namespace std;
 #include"FuncionesGlobales.h"
 
 const char * Empresa::getNombre() const {
-return _nombre;
+    return _nombre;
 }
+
 int Empresa::getCUIT(){
-return _cuit;
-
+    return _cuit;
 }
 
-
-void Empresa:: setNombre(const char *nombre)
-{
-strcpy(_nombre,nombre);
+void Empresa:: setNombre(const char *nombre){
+    strcpy(_nombre,nombre);
 }
-void Empresa:: setCUIT(int cuit)
-{
-_cuit=cuit;
+
+void Empresa:: setCUIT(int cuit){
+    _cuit=cuit;
 }
 
 void Empresa::Cargar(){
-cout<<"Ingrese nombre= ";
-cargarCadena(_nombre,30);
-cout<<"Ingrese cuit= ";
-cin>>_cuit;
+    cout<<"Ingrese nombre= ";
+    cargarCadena(_nombre,30);
+    cout<<"Ingrese cuit= ";
+    cin>>_cuit;
 }
 
 void Empresa::Mostrar(){
-cout<<"Su Nombre es: "<<_nombre<<endl;
-cout<<"Su Cuit es: "<<_cuit<<endl;
+    cout<<"Su Nombre es: "<<_nombre<<endl;
+    cout<<"Su Cuit es: "<<_cuit<<endl;
 }
 
 Empresa::Empresa(){
@@ -40,6 +38,6 @@ Empresa::Empresa(){
 }
 
 Empresa::Empresa(const char *nombre,int cuit){
-setNombre(nombre);
-setCUIT(cuit);
+    setNombre(nombre);
+    setCUIT(cuit);
 }

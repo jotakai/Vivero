@@ -9,20 +9,16 @@ using namespace std;
 #include "StockPlanta.h"
 //<----
 
-
-// void pruebaArchivos()
-// {
-// StockPlanta stockPlanta;
-//  Planta P;
-// ArchivoStockPlanta ASP("prueba2.dat");
-//   P.Cargar(); //<---
-//  stockPlanta.setPlanta(P);
-
-
-//  ASP.grabarRegistro(stockPlanta);
-// stockPlanta=ASP.leerRegistro(1);
-// stockPlanta.getPlanta().Mostrar();
-// }
+ void pruebaArchivos() {
+    Planta P;
+    StockPlanta stockPlanta;
+    ArchivoStockPlanta ASP("prueba2.dat");
+    P.Cargar(); //<---
+    stockPlanta.setPlanta(P);
+    ASP.grabarRegistro(stockPlanta);
+    stockPlanta=ASP.leerRegistro(0);
+    stockPlanta.getPlanta().Mostrar();
+ }
 
 
 
@@ -68,10 +64,10 @@ int main(){
 
 
 
-   // menuPrincipal();
+   menuPrincipal();
 
 
-pruebaArchivos();
+//pruebaArchivos();
     return 0;
 }
 

@@ -19,8 +19,7 @@ Cliente::Cliente(std::string nombre, std::string apellido, int edad, std::string
     _mail = mail;
 }
 
-Cliente::~Cliente()
-{
+Cliente::~Cliente(){
 }
 
 std::string Cliente::getDireccion(){
@@ -48,21 +47,19 @@ void Cliente::setMail(std::string mail){
 }
 
 void Cliente::Cargar(){
-Persona::Cargar();
-cout<<"Ingrese Direccion = ";
-getline(cin,_direccion);
-cout<<"Ingrese Telefono = ";
-getline(cin,_telefono);
-cout<<"Ingrese Mail = ";
-getline(cin,_mail);
+    Persona::Cargar();
+    cout<<"Ingrese Direccion = ";
+    getline(cin,_direccion);
+    cout<<"Ingrese Telefono = ";
+    getline(cin,_telefono);
+    cout<<"Ingrese Mail = ";
+    getline(cin,_mail);
 
 }
 
-
 void Cliente::Mostrar(){
-Persona::Mostrar();
-cout<<"Su Direccion es: "<<_direccion<<endl;
-cout<<"Su Telefono es: "<<_direccion<<endl;
-cout<<"Su Mail es: "<<_mail<<endl;
-
+    Persona::Mostrar();
+    cout<<"Su Direccion es: "<<_direccion<<endl;
+    cout<<"Su Telefono es: "<<_direccion<<endl;
+    cout<<"Su Mail es: "<<_mail<<endl;
 }

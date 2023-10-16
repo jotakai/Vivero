@@ -10,6 +10,7 @@ using namespace std;
 #include "Direccion.h"
 #include "Empresa.h"
 #include "Proveedor.h"
+#include"FuncionesGlobales.h"
 #include"menu.h"
 
 ///////////////////////////////////////////////////////////////////////////
@@ -20,8 +21,9 @@ int opcion;
 while(true){
 
 
-cout<<"opcion 1 ----> Movientos Empresa"<<endl;
+cout<<"opcion 1 ----> Movimientos Empresa"<<endl;
 cout<<"opcion 2 ----> Movimientos Persona"<<endl;
+cout<<"opcion 3 ----> Movimientos Duenio"<<endl;
 cout<<"opcion 0 ----> Fin del Programa"<<endl;
 cin>>opcion;
 system("cls");
@@ -37,6 +39,12 @@ system("cls");
 /*******************************************************************/
     case 2:{
         menuPersona(opcion);
+        system("cls");
+    }
+    break;
+/*******************************************************************/
+    case 3:{
+        menuDuenio(opcion);
         system("cls");
     }
     break;
@@ -62,68 +70,7 @@ system("cls");
 
 
 }
-
-
-//PERSONA
 ///////////////////////////////////////////////////////////////////////////
-void menuPersona(int opcion){
-while(true){
-
-    system("cls");
-    cout<<"Opcion 1 ----> Comprar"<<endl;
-    cout<<"Opcion 2 ----> Vender"<<endl;
-    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
-    cin>>opcion;
-    system("cls");
-    switch (opcion)
-    {
-/*******************************************************************/
-    case 1:{
-        /*hacer una lista de lo que quiere COMPRAR ejemplo
-        • Plantas ---> Sub Menu de listar plantas y su Stock
-        • Herramientas ---> Sub Menu de listar Herramientas y su Stock
-        • Abonos ---> Sub Menu de listar Abonos y su Stock
-        • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
-        • etc
-*/
-    menuPersonaQueDeseaComprar(opcion);
-    }
-        break;
-/*******************************************************************/
-    case 2:{
-        /*hacer una lista de lo que quiere VENDER ejemplo
-        • Plantas ---> Sub Menu de listar plantas y su Stock
-        • Herramientas ---> Sub Menu de listar Herramientas y su Stock
-        • Abonos ---> Sub Menu de listar Abonos y su Stock
-        • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
-        • etc
-*/
-    menuPersonaQueDeseaVender(opcion);
-    }
-        break;
-/*******************************************************************/
-    case 0:{
-        system("cls");
-        cout<<"Saliste"<<endl;
-        system("pause");
-        return;
-    }
-    break;
-/*******************************************************************/
-    default:{
-        system("cls");
-        cout<<"valor ingresado no existe dentro del menu"<<endl;
-        system("pause");
-    }
-        break;
-/*******************************************************************/
-}
-
-}
-}
-///////////////////////////////////////////////////////////////////////////
-
-
 
 //EMPRESA
 ///////////////////////////////////////////////////////////////////////////
@@ -184,9 +131,7 @@ while(true){
 }
 ///////////////////////////////////////////////////////////////////////////
 void menuEmpresaQueDeseaComprar(int opcion){
- //Compra c;
- 
- while(true){
+while(true){
 
     system("cls");
     cout<<"Opcion 1 ----> Plantas"<<endl;
@@ -521,7 +466,63 @@ switch (opcion)
 }
 ///////////////////////////////////////////////////////////////////////////
 
-//Persona
+//PERSONA
+///////////////////////////////////////////////////////////////////////////
+void menuPersona(int opcion){
+while(true){
+
+    system("cls");
+    cout<<"Opcion 1 ----> Comprar"<<endl;
+    cout<<"Opcion 2 ----> Vender"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    cin>>opcion;
+    system("cls");
+    switch (opcion)
+    {
+/*******************************************************************/
+    case 1:{
+        /*hacer una lista de lo que quiere COMPRAR ejemplo
+        • Plantas ---> Sub Menu de listar plantas y su Stock
+        • Herramientas ---> Sub Menu de listar Herramientas y su Stock
+        • Abonos ---> Sub Menu de listar Abonos y su Stock
+        • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
+        • etc
+*/
+    menuPersonaQueDeseaComprar(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 2:{
+        /*hacer una lista de lo que quiere VENDER ejemplo
+        • Plantas ---> Sub Menu de listar plantas y su Stock
+        • Herramientas ---> Sub Menu de listar Herramientas y su Stock
+        • Abonos ---> Sub Menu de listar Abonos y su Stock
+        • Incectisidas ---> Sub Menu de listar Incectisidas y su Stock
+        • etc
+*/
+    menuPersonaQueDeseaVender(opcion);
+    }
+        break;
+/*******************************************************************/
+    case 0:{
+        system("cls");
+        cout<<"Saliste"<<endl;
+        system("pause");
+        return;
+    }
+    break;
+/*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+/*******************************************************************/
+}
+
+}
+}
 ///////////////////////////////////////////////////////////////////////////
 void menuPersonaQueDeseaComprar(int opcion){
 while(true){
@@ -566,7 +567,7 @@ while(true){
 
 }
 }
-/////////////////////////////////////////////////////////////////////////// 🧡
+///////////////////////////////////////////////////////////////////////////
 void menuPersonaQueDeseaVender(int opcion){
 while(true){
 
@@ -857,5 +858,87 @@ switch (opcion)
 }
 }
 ///////////////////////////////////////////////////////////////////////////
+
+//DUEÑO
+///////////////////////////////////////////////////////////////////////////
+void menuDuenio(int opcion){
+    
+    char usuario[30];
+    int contra;
+    int band=0;
+    int i=1;
+
+    for(int i=1; i<=4; i++){
+
+        if(i<=3){
+        cout<<"ingrese usuario: "<<endl;  //el usuario es Vivero
+        cargarCadena(usuario,30);
+        cout<<"Ingrese Contracenia: "<<endl; //la contraceña es 123
+        cin>>contra;
+
+            if((contra==123)&&(strcmp(usuario, "Vivero") == 0)){
+                band=1;
+                cout<<"CORRECTO"<<endl;
+                system("pause");
+                i=5;
+                }else{
+                cout<<"el usuario o contracenia son incorrectos"<<endl;
+                }
+            }
+        
+        if((i==4)&&(band==0)){
+            cout<<"no ingresaste correctamente el usuario y contracenia"<<endl;
+            system("pause");
+            return;
+        }
+    }
+
+if(band==1){
+
+    while(true){
+    system("cls");
+    cout<<"BIENVENIDO DUENIO"<<endl;
+    cout<<"Opcion 1 ----> Cargar Datos"<<endl;
+    cout<<"Opcion 2 ----> Modificar Datos"<<endl;
+    cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
+    cin>>opcion;
+    system("cls");
+
+        switch (opcion){
+        /*******************************************************************/
+            case 1:{
+                system("cls");
+                cout<<"OPCION 1"<<endl;
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 2:{
+                system("cls");
+                cout<<"OPCION 2"<<endl;
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 0:{
+                system("cls");
+                cout<<"Saliste"<<endl;
+                system("pause");
+                return;
+            }
+            break;
+        /*******************************************************************/
+            default:{
+                system("cls");
+                cout<<"valor ingresado no existe dentro del menu"<<endl;
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+        }
+    }
+}
+
+}
 
 ///////////////////////////////////////////////////////////////////////////

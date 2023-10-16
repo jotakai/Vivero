@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
 
-class Persona
-{
+class Persona{
+    
 public:
 
 //contructor predeterminado

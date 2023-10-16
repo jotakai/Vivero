@@ -26,3 +26,6 @@ void menuPlantasVentaPersona(int opcion);//❌ Vender
 
 void menuHerramientasCompraPersona(int opcion);//❌ Comprar
 void menuHerramientasVentaPersona(int opcion);//❌ Vender
+
+//DUEÑO
+void menuDuenio(int opcion);
