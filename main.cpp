@@ -10,19 +10,19 @@ using namespace std;
 //<----
 
 
-void pruebaArchivos()
-{
-StockPlanta stockPlanta;
- Planta P;
-ArchivoStockPlanta ASP("prueba2.dat");
-  P.Cargar(); //<---
- stockPlanta.setPlanta(P);
+// void pruebaArchivos()
+// {
+// StockPlanta stockPlanta;
+//  Planta P;
+// ArchivoStockPlanta ASP("prueba2.dat");
+//   P.Cargar(); //<---
+//  stockPlanta.setPlanta(P);
 
 
- ASP.grabarRegistro(stockPlanta);
-stockPlanta=ASP.leerRegistro(1);
-stockPlanta.getPlanta().Mostrar();
-}
+//  ASP.grabarRegistro(stockPlanta);
+// stockPlanta=ASP.leerRegistro(1);
+// stockPlanta.getPlanta().Mostrar();
+// }
 
 
 
