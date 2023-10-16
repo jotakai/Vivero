@@ -1,20 +1,20 @@
 #include <iostream>
+#include <cstring>
 #include <string>
 #include "Planta.h"
 
 using namespace std;
 
 Planta::Planta(){
-    _nombre = "";
-    _especie = "";
+    strcpy(_nombre,"");
+    strcpy(_especie,"");
     _codigoPlanta=-1;
     
 }
 
 Planta::Planta(std::string nombre, std::string especie)
-{
-    _nombre = nombre;
-    _especie = especie;
+{ strcpy(_nombre,nombre.c_str());
+    strcpy(_especie,especie.c_str());
    
 }
 
@@ -33,11 +33,12 @@ std::string Planta::getEspecie(){
 
 
 void Planta::setNombre(std::string nombre){
-    _nombre = nombre;
+    strcpy(_nombre,nombre.c_str());
 }
 
 void Planta::setEspecie(std::string especie){
-    _especie = especie;
+       strcpy(_especie,especie.c_str());
+
 }
 void Planta::setPrecio(float precio){
 _precio=precio;
@@ -53,11 +54,13 @@ return _codigoPlanta;
 }
 
 void Planta::Cargar(){
-cin.ignore();
+string nombre,especie;
 cout<<"Ingrese Nombre = ";
-getline(cin,_nombre);
+cin>>nombre;
+setNombre(nombre);
 cout<<"Ingrese Especie = ";
-getline(cin,_especie);
+cin>>especie;
+setEspecie(especie);
 _codigoPlanta++;
 
 }

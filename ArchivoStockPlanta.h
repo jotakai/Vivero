@@ -13,4 +13,5 @@ public:
     StockPlanta leerRegistro(int);
     bool grabarRegistro(StockPlanta);
     int contarRegistros();
+    void setPlanta();
 };

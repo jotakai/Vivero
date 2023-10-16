@@ -13,4 +13,5 @@ public:
     StockHerramientas leerRegistro(int);
     bool grabarRegistro(StockHerramientas);
     int contarRegistros();
+    
 };

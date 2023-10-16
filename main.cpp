@@ -5,23 +5,23 @@
 using namespace std;
 
 #include"menu.h"
-#include "ArchivoStockHerramienta.h"
-#include "StockHerramientas.h"
+#include "ArchivoStockPlanta.h"
+#include "StockPlanta.h"
 //<----
 
 
 void pruebaArchivos()
 {
-StockHerramientas stockHerramienta;
-Herramienta H;
-ArchivoStockHerramienta ASH("prueba.dat");
- H.Cargar(); //<---
-stockHerramienta.setHerramienta(H);
+StockPlanta stockPlanta;
+ Planta P;
+ArchivoStockPlanta ASP("prueba2.dat");
+  P.Cargar(); //<---
+ stockPlanta.setPlanta(P);
 
 
-ASH.grabarRegistro(stockHerramienta);
-stockHerramienta=ASH.leerRegistro(0);
-stockHerramienta.getHerramienta().Mostrar();
+ ASP.grabarRegistro(stockPlanta);
+stockPlanta=ASP.leerRegistro(1);
+stockPlanta.getPlanta().Mostrar();
 }
 
 

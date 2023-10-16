@@ -22,7 +22,7 @@ public:
 
 private:
     int _codigoPlanta;
-    std::string _nombre;
-    std::string _especie;
+char _nombre[30];
+    char  _especie [30];
     float _precio;
 };

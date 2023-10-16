@@ -1,5 +1,12 @@
 #include "StockPlanta.h"
 
+void StockPlanta::setPlanta(Planta planta){
+_planta=planta;
+}
+Planta StockPlanta::getPlanta(){
+    return _planta;
+}
+
 void StockPlanta::setCapacidad(int cantidad){
     _capacidad=cantidad;
 }
