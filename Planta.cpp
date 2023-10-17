@@ -7,14 +7,14 @@ using namespace std;
 
 Planta::Planta(){
     strcpy(_nombre,"");
-    strcpy(_especie,"");
+    strcpy(_estacion,"");
     _codigoPlanta=-1;
     
 }
 
-Planta::Planta(std::string nombre, std::string especie){ 
+Planta::Planta(std::string nombre, std::string estacion){ 
     strcpy(_nombre,nombre.c_str());
-    strcpy(_especie,especie.c_str());
+    strcpy(_estacion,estacion.c_str());
 }
 
 Planta::~Planta(){
@@ -25,8 +25,8 @@ std::string Planta::getNombre(){
     return _nombre;
 }
 
-std::string Planta::getEspecie(){
-    return _especie;
+std::string Planta::getEstacion(){
+    return _estacion;
 }
 
 
@@ -35,8 +35,8 @@ void Planta::setNombre(std::string nombre){
     strcpy(_nombre,nombre.c_str());
 }
 
-void Planta::setEspecie(std::string especie){
-    strcpy(_especie,especie.c_str());
+void Planta::setEstacion(std::string estacion){
+    strcpy(_estacion,estacion.c_str());
 }
 
 void Planta::setPrecio(float precio){
@@ -56,17 +56,17 @@ float Planta::getCodigoPlanta(){
 }
 
 void Planta::Cargar(){
-    string nombre,especie;
+    string nombre,estacion;
     cout<<"Ingrese Nombre = ";
     cin>>nombre;
     setNombre(nombre);
-    cout<<"Ingrese Especie = ";
-    cin>>especie;
-    setEspecie(especie);
+    cout<<"Ingrese Estacion = ";
+    cin>>estacion;
+    setEstacion(estacion);
     _codigoPlanta++;
 }
 
 void Planta::Mostrar(){
     cout<<"Su Nombre es: "<<_nombre<<endl;
-    cout<<"Su Especie es: "<<_especie<<endl;
+    cout<<"Su Estacion es: "<<_estacion<<endl;
 }

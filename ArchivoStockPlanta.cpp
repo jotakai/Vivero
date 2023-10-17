@@ -6,6 +6,8 @@ ArchivoStockPlanta::ArchivoStockPlanta(const char *n){
     strcpy(nombre, n);
 }
 
+
+
 StockPlanta ArchivoStockPlanta::leerRegistro(int pos){
     StockPlanta reg;
     reg.setEstado(false);
@@ -36,4 +38,10 @@ int ArchivoStockPlanta::contarRegistros(){
     return tam/sizeof(StockPlanta);
 }
 
-
+bool ArchivoStockPlanta::borrarRegistro(){
+    FILE *p;
+    p=fopen(nombre, "wb");
+    if(p==nullptr){ return false;}
+    fclose(p);
+    return true;
+}

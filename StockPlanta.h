@@ -23,4 +23,7 @@ class StockPlanta{
 
         void AumentarCapacidad(int );
         void DisminuirCapacidad(int );
+
+        void CargarRegistro(int tam);
+        void MostrarRegistro();
 };

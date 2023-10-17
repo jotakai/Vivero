@@ -1,3 +1,6 @@
+#include<iostream>
+
+using namespace std;
 #include "StockPlanta.h"
 
 void StockPlanta::setID(int id){
@@ -38,4 +41,15 @@ void StockPlanta::AumentarCapacidad(int cantidad){
 
 void StockPlanta::DisminuirCapacidad(int cantidad){
     _capacidad=_capacidad-cantidad;
+}
+
+void StockPlanta::CargarRegistro(int tam){
+_planta.Cargar();
+setCapacidad(tam);
+_estado=1;
+}
+
+void StockPlanta::MostrarRegistro(){
+_planta.Mostrar();
+cout<<"Capacidad: "<<_capacidad<<endl;
 }

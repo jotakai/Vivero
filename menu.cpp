@@ -12,6 +12,11 @@ using namespace std;
 #include "Proveedor.h"
 #include"FuncionesGlobales.h"
 #include"menu.h"
+//#include"StockHerramientas.h"
+//#include"StockPlanta.h"
+#include"ArchivoStockHerramienta.h"
+#include"ArchivoStockPlanta.h"
+
 
 ///////////////////////////////////////////////////////////////////////////
 void menuPrincipal(){
@@ -887,6 +892,7 @@ void menuDuenio(int opcion){
             }
         
         if((i==4)&&(band==0)){
+            system("cls");
             cout<<"no ingresaste correctamente el usuario y contracenia"<<endl;
             system("pause");
             return;
@@ -901,9 +907,9 @@ if(band==1){
     cout<<"Opcion 1 ----> Cargar Datos"<<endl; //'ab' de archivos
     cout<<"Opcion 2 ----> Modificar Datos"<<endl;//'rb' que lo lea y modifique
     cout<<"Opcion 3 ----> Borrar o Limpiar Datos"<<endl; //'wb' de archivos == 'baja Fisica'
-    //cout<<"Opcion  ----> dar de baja algun Productos"<<endl; //bool para dar de 'basa logica'
-    cout<<"Opcion 4 ----> Listar Datos"<<endl; //seleccionar el archivo que quieres que abra y muestre
-    cout<<"Opcion 5 ----> Contar Registros de algun Producto"<<endl;//Cuenta todos los registros dentro del bloc de notas
+    cout<<"Opcion 4 ----> dar de baja algun Productos"<<endl; //bool para dar de 'basa logica'
+    cout<<"Opcion 5 ----> Listar Datos"<<endl; //seleccionar el archivo que quieres que abra y muestre
+    cout<<"Opcion 6 ----> Contar Registros de algun Producto"<<endl;//Cuenta todos los registros dentro del bloc de notas
     cout<<"Opcion 0 ----> salir"<<endl;//--> Salir a Menu Principal
     cin>>opcion;
     system("cls");
@@ -933,12 +939,19 @@ if(band==1){
         /*******************************************************************/
             case 4:{
                 system("cls");
-                ListarDatos(opcion);
+                
                 system("pause");
             }
                 break;
         /*******************************************************************/
             case 5:{
+                system("cls");
+                ListarDatos(opcion);
+                system("pause");
+            }
+                break;
+        /*******************************************************************/
+            case 6:{
                 system("cls");
                 ContarRegistros(opcion);
                 system("pause");
@@ -983,7 +996,7 @@ while(true){
     /*******************************************************************/
     case 1:{
             system("cls");
-            cout<<"OPCION 1"<<endl;
+            CargarPlanta();
             system("pause");
         //ARMAR UNA FUNCION QUE PERMITA CARGAR EN ARCHIVO Planta
         // Planta ob1;
@@ -994,6 +1007,7 @@ while(true){
     case 2:{
             system("cls");
             cout<<"OPCION 2"<<endl;
+            CargarHerramienta();
             system("pause");
     }
         break;
@@ -1032,14 +1046,196 @@ void ModificarDatos(int opcion){
 }
 ///////////////////////////////////////////////////////////////////////////
 void LimpiarDatos(int opcion){
+    system("cls");
+    cout<<"Que quieres Limpiar?"<<endl<<endl;
+    cout<<"Opcion 1 ---> Plantas"<<endl; //Crear funcion que carge plantas a un Archivos
+    cout<<"Opcion 2 ---> Herramientas"<<endl; //Crear funcion que carge Herramientas a un Archivos
+    cout<<"Opcion 3 ---> Agro Quimicos"<<endl; //Crear funcion que carge Agro Quimicos a un Archivos
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion){
+    /*******************************************************************/
+    case 1:{
+            system("cls");
+            LimpiarPlanta();
+            system("pause");
+        //ARMAR UNA FUNCION QUE PERMITA CARGAR EN ARCHIVO Planta
+        // Planta ob1;
+        // ob1.Cargar();
+    }
+        break;
+    /*******************************************************************/
+    case 2:{
+            system("cls");
+            cout<<"OPCION 2"<<endl;
+            //LimpiarHerramienta();
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+    case 3:{
+            system("cls");
+            cout<<"OPCION 3"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+        case 0:{
+            system("cls");
+            cout<<"Saliste"<<endl;
+            system("pause");
+            return;
+        }
+        break;
+    /*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+    /*******************************************************************/
+
+}
+
 
 }
 ///////////////////////////////////////////////////////////////////////////
 void ListarDatos(int opcion){
+system("cls");
 
+while(true){
+    system("cls");
+    cout<<"Que quieres Listar?"<<endl<<endl;
+    cout<<"Opcion 1 ---> Plantas"<<endl; //Crear funcion que carge plantas a un Archivos
+    cout<<"Opcion 2 ---> Herramientas"<<endl; //Crear funcion que carge Herramientas a un Archivos
+    cout<<"Opcion 3 ---> Agro Quimicos"<<endl; //Crear funcion que carge Agro Quimicos a un Archivos
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion){
+    /*******************************************************************/
+    case 1:{
+            system("cls");
+            ListarPlanta();
+            system("pause");
+        //ARMAR UNA FUNCION QUE PERMITA CARGAR EN ARCHIVO Planta
+        // Planta ob1;
+        // ob1.Cargar();
+    }
+        break;
+    /*******************************************************************/
+    case 2:{
+            system("cls");
+            cout<<"OPCION 2"<<endl;
+            CargarHerramienta();
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+    case 3:{
+            system("cls");
+            cout<<"OPCION 3"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+        case 0:{
+            system("cls");
+            cout<<"Saliste"<<endl;
+            system("pause");
+            return;
+        }
+        break;
+    /*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+    /*******************************************************************/
+
+}
+
+
+}
 }
 ///////////////////////////////////////////////////////////////////////////
 void ContarRegistros(int opcion){
+
+}
+///////////////////////////////////////////////////////////////////////////
+void CargarPlanta(){
+int tam;
+ArchivoStockPlanta ClassAr("planta.dat");
+StockPlanta ClassP;
+
+cout<<"ingrese Cantidad de Registros"<<endl;
+cout<<"que quiere cargar"<<endl;
+cin>>tam;
+
+for(int i=0; i<tam; i++){
+    //stock
+    ClassP.CargarRegistro(tam);
+    cout<<endl;
+    if(ClassAr.grabarRegistro(ClassP)==false){
+        cout<<"no pudo cargarse"<<endl;
+    }
+}
+
+}
+///////////////////////////////////////////////////////////////////////////
+void CargarHerramienta()
+{
+    int tam;
+ArchivoStockHerramienta ClassAr("herramienta.dat");
+StockHerramientas ClassP;
+
+cout<<"ingrese Cantidad de Registros"<<endl;
+cout<<"que quiere cargar"<<endl;
+cin>>tam;
+
+for(int i=0; i<tam; i++){
+    //stock
+    ClassP.CargarRegistro(tam);
+    cout<<endl;
+    if(ClassAr.grabarRegistro(ClassP)==false){
+        cout<<"no pudo cargarse"<<endl;
+    }
+}
+}
+///////////////////////////////////////////////////////////////////////////
+void LimpiarPlanta(){
+ArchivoStockPlanta ClassAr("planta.dat");
+
+if(!ClassAr.borrarRegistro()){
+cout<<"no pudo borrrarlo"<<endl;
+}
+
+}
+///////////////////////////////////////////////////////////////////////////
+void ListarHerramienta(){
+    
+}
+///////////////////////////////////////////////////////////////////////////
+//void LimpiarHerramienta(){
+//    
+//}
+///////////////////////////////////////////////////////////////////////////
+void ListarPlanta(){
+ArchivoStockPlanta ClassAr("planta.dat");
+StockPlanta ClassP;
+
+int tam=0;
+
+tam=ClassAr.contarRegistros();
+
+for(int i=0; i<tam; i++){
+    ClassP = ClassAr.leerRegistro(i);
+    ClassP.MostrarRegistro();
+}
 
 }
 ///////////////////////////////////////////////////////////////////////////

@@ -5,14 +5,14 @@ class Planta
 {
 public:
     Planta();
-    Planta(std::string nombre, std::string especie);
+    Planta(std::string nombre, std::string estacion);
     ~Planta();
 
     std::string getNombre();
-    std::string getEspecie();
+    std::string getEstacion();
 
     void setNombre(std::string nombre);
-    void setEspecie(std::string especie);
+    void setEstacion(std::string estacion);
     void setPrecio(float);       //
     float getPrecio();           //
     void setCodigoPlanta(float); //
@@ -25,6 +25,6 @@ public:
 private:
     int _codigoPlanta;
     char _nombre[30];
-    char  _especie [30];
+    char  _estacion[30];
     float _precio;
 };

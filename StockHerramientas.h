@@ -18,5 +18,6 @@ class StockHerramientas{
         Herramienta getHerramienta();
         int getCapacidad();
         bool getEstado();
-        void Mostrar();
+        void CargarRegistro(int);
+        void MostrarRegistro();
 };

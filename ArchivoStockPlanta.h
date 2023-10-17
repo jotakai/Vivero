@@ -8,10 +8,12 @@ private:
     char nombre[30];
 
 public:
-    void CargarRegistro();
+    
     ArchivoStockPlanta(const char *n);
     StockPlanta leerRegistro(int);
     bool grabarRegistro(StockPlanta);
     int contarRegistros();
+    bool borrarRegistro();
     void setPlanta();
+
 };

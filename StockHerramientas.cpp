@@ -34,6 +34,15 @@ int StockHerramientas::getCapacidad(){
 bool StockHerramientas::getEstado(){
     return _estado;
 }
+void StockHerramientas::CargarRegistro(int tam){
+_herramienta.Cargar();
+setCapacidad(tam);
+_estado=1;
+}
+void StockHerramientas::MostrarRegistro(){
+_herramienta.Mostrar();
+cout<<"Capacidad: "<<_capacidad<<endl;
+}
 // void StockHerramientas::Mostrar(){
 
 // cout<<"Capacidad"<< _capacidad <<endl;
