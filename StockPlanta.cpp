@@ -44,8 +44,10 @@ void StockPlanta::DisminuirCapacidad(int cantidad){
 }
 
 void StockPlanta::CargarRegistro(int tam){
-_planta.Cargar();
-setCapacidad(tam);
+
+_planta.Cargar();//<---
+//Habria que hacer una funcion de busqueda que nos permita saber si una planta ya fue ingresada
+AumentarCapacidad(tam);
 _estado=1;
 }
 
