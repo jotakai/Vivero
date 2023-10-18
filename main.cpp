@@ -65,7 +65,7 @@ int main(){
 
 
    menuPrincipal();
-
+   system("cls");
 
 //pruebaArchivos();
     return 0;

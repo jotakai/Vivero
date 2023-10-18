@@ -21,6 +21,7 @@ public:
     float getPrecio() const; 
     bool getEstado() const;
 
+
     void Cargar();
     void Mostrar();
 

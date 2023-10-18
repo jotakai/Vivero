@@ -15,7 +15,7 @@ public:
     void setEstacion(std::string estacion);
     void setPrecio(float);       //
     float getPrecio();           //
-    void setCodigoPlanta(float); //
+    void setCodigoPlanta(int); //
     float getCodigoPlanta();     //
     void Cargar();
     void Mostrar();

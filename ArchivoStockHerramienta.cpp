@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 #include "ArchivoStockHerramienta.h"
+#include"Herramientas.h"
 
 ArchivoStockHerramienta::ArchivoStockHerramienta(const char *n){
     strcpy(_nombre, n);
@@ -42,4 +43,12 @@ bool ArchivoStockHerramienta::borrarRegistro(){
     if(p==nullptr){ return false;}
     fclose(p);
     return true;
+}
+bool ArchivoStockHerramienta::reemplazarRegistroCompra(StockHerramientas reg, int posicionAReemplazar){
+    FILE *p = fopen(_nombre, "rb+");
+    if (p == NULL){return false;}
+    fseek(p, posicionAReemplazar * sizeof(StockHerramientas), SEEK_SET);
+    bool pudoEscribir = fwrite(&reg, sizeof(StockHerramientas), 1, p);
+    fclose(p);
+    return pudoEscribir;
 }

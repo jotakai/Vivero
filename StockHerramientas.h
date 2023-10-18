@@ -4,11 +4,12 @@
 class StockHerramientas{
 
     private:
-        int _id=0;
+        int _id;
         Herramienta _herramienta;
-        int _capacidad=0;
+        int _capacidad;
         bool _estado=true;
     public:
+    StockHerramientas();
         void setID(int id);
         void setHerramienta(Herramienta herramienta);
         void setCapacidad(int capacidad);
@@ -20,4 +21,5 @@ class StockHerramientas{
         bool getEstado();
         void CargarRegistro(int);
         void MostrarRegistro();
+       
 };

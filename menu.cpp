@@ -16,6 +16,7 @@ using namespace std;
 //#include"StockPlanta.h"
 #include"ArchivoStockHerramienta.h"
 #include"ArchivoStockPlanta.h"
+#include"Herramientas.h"
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -1042,8 +1043,63 @@ while(true){
 }
 ///////////////////////////////////////////////////////////////////////////
 void ModificarDatos(int opcion){
+system("cls");
+    cout<<"Que quieres Modificar?"<<endl<<endl;
+    cout<<"Opcion 1 ---> Plantas"<<endl; //Crear funcion que carge plantas a un Archivos
+    cout<<"Opcion 2 ---> Herramientas"<<endl; //Crear funcion que carge Herramientas a un Archivos
+    cout<<"Opcion 3 ---> Agro Quimicos"<<endl; //Crear funcion que carge Agro Quimicos a un Archivos
+    cout<<"Opcion 0 ----> salir"<<endl;
+    cin>>opcion;
+    system("cls");
+    switch (opcion){
+    /*******************************************************************/
+    case 1:{
+            system("cls");
+            cout<<"OPCION 1"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+    case 2:{
+            system("cls");
+            cout<<"OPCION 2"<<endl;
+            ModificarHerramienta();
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+    case 3:{
+            system("cls");
+            cout<<"OPCION 3"<<endl;
+            system("pause");
+    }
+        break;
+    /*******************************************************************/
+        case 0:{
+            system("cls");
+            cout<<"Saliste"<<endl;
+            system("pause");
+            return;
+        }
+        break;
+    /*******************************************************************/
+    default:{
+        system("cls");
+        cout<<"valor ingresado no existe dentro del menu"<<endl;
+        system("pause");
+    }
+        break;
+    /*******************************************************************/
 
 }
+
+
+}
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////
 void LimpiarDatos(int opcion){
     system("cls");
@@ -1129,6 +1185,7 @@ while(true){
     case 2:{
             system("cls");
             cout<<"OPCION 2"<<endl;
+            SaltoDeLinea();
             ListarHerramienta();
             system("pause");
     }
@@ -1168,8 +1225,9 @@ void ContarRegistros(int opcion){
 }
 ///////////////////////////////////////////////////////////////////////////
 void CargarPlanta(){
-int tam;
+int tam,tamanioRegistro=0;
 ArchivoStockPlanta ClassAr("planta.dat");
+tamanioRegistro=ClassAr.contarRegistros();
 StockPlanta ClassP;
 
 cout<<"ingrese Cantidad de Registros"<<endl;
@@ -1178,7 +1236,8 @@ cin>>tam;
 
 for(int i=0; i<tam; i++){
     //stock
-    ClassP.CargarRegistro(tam);
+    
+    ClassP.CargarRegistro(tamanioRegistro);
     cout<<endl;
     if(ClassAr.grabarRegistro(ClassP)==false){
         cout<<"no pudo cargarse"<<endl;
@@ -1255,7 +1314,31 @@ tam=ClassAr.contarRegistros();
 for(int i=0; i<tam; i++){
     ClassP = ClassAr.leerRegistro(i);
     ClassP.MostrarRegistro();
+    cout<<endl;
 }
 
+}
+///////////////////////////////////////////////////////////////////////////
+void ModificarHerramienta(){
+   
+    int max,posReg;
+    ArchivoStockHerramienta ClassAr("herramienta.dat");
+    StockHerramientas ClassP;
+
+    //ClassH = ClassP.getHerramienta();
+
+    max=ClassAr.contarRegistros();
+   // cout<<"TOTAL DE REGISTROS= "<<max<<endl;
+    cout<<"ingrese Posicion del Registro que quieren cambiar"<<endl;
+    cin>>posReg;
+
+    if((posReg>0)&&(posReg<=max)){
+        //ClassP = ClassAr.leerRegistro(posReg-1);
+        ClassP.CargarRegistro(posReg); //<---
+        ClassAr.reemplazarRegistroCompra(ClassP,posReg-1);
+
+    }else{
+        cout<<"la posicion que ingreso no existe"<<endl;
+    }
 }
 ///////////////////////////////////////////////////////////////////////////

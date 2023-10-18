@@ -43,7 +43,8 @@ void ContarRegistros(int opcion);//Cuenta todos los registros dentro del bloc de
 void CargarPlanta();
 void CargarHerramienta();
 ///ModificarDatos
-
+void ModificarPlanta();
+void ModificarHerramienta();
 ///LimpiarDatos
 void LimpiarPlanta();
 void LimpiarHerramienta();

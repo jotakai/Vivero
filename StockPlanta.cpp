@@ -4,7 +4,8 @@ using namespace std;
 #include "StockPlanta.h"
 
 void StockPlanta::setID(int id){
-    _id=id;
+    
+    _id=_id+id;
 }
 
 int StockPlanta::getID(){
@@ -44,10 +45,14 @@ void StockPlanta::DisminuirCapacidad(int cantidad){
 }
 
 void StockPlanta::CargarRegistro(int tam){
-
+int cantidad;
+//if(tam)
+setID(tam);
 _planta.Cargar();//<---
 //Habria que hacer una funcion de busqueda que nos permita saber si una planta ya fue ingresada
-AumentarCapacidad(tam);
+cout<<"Cantidad de plantas de esta variedad que ingresan: "<<endl;
+cin>>cantidad;
+AumentarCapacidad(cantidad);
 _estado=1;
 }
 

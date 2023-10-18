@@ -2,7 +2,11 @@
 using namespace std;
 #include"StockHerramientas.h"
 
-
+StockHerramientas::StockHerramientas()
+{
+     int _capacidad=0;
+    int _id=0;
+}
 void StockHerramientas::setID(int id){
     _id=id;
 }
@@ -43,6 +47,7 @@ void StockHerramientas::MostrarRegistro(){
 _herramienta.Mostrar();
 cout<<"Capacidad: "<<_capacidad<<endl;
 }
+
 // void StockHerramientas::Mostrar(){
 
 // cout<<"Capacidad"<< _capacidad <<endl;

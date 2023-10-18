@@ -14,6 +14,4 @@ public:
     bool grabarRegistro(StockPlanta);
     int contarRegistros();
     bool borrarRegistro();
-    void setPlanta();
-
 };

@@ -14,3 +14,9 @@ void cargarCadena(char *palabra, int tamano){
     palabra[i]='\0';
     fflush(stdin);
 }
+
+void SaltoDeLinea(int tam){
+for(int i=0;i<tam;i++){
+    cout<<endl<<endl<<endl<<endl;
+}
+}

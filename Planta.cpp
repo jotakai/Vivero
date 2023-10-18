@@ -47,7 +47,7 @@ float Planta::getPrecio(){
     return _precio;
 }
 
-void Planta::setCodigoPlanta(float codigoPlanta){
+void Planta::setCodigoPlanta(int codigoPlanta){
     _codigoPlanta=codigoPlanta;
 }
 
@@ -57,13 +57,15 @@ float Planta::getCodigoPlanta(){
 
 void Planta::Cargar(){
     string nombre,estacion;
+    int codigoPlanta;
     cout<<"Ingrese Nombre = ";
     cin>>nombre;
     setNombre(nombre);
     cout<<"Ingrese Estacion = ";
     cin>>estacion;
     setEstacion(estacion);
-    _codigoPlanta++;
+    cin>>codigoPlanta;
+    setCodigoPlanta(codigoPlanta);
 }
 
 void Planta::Mostrar(){

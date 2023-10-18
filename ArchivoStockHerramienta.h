@@ -1,7 +1,7 @@
 #pragma once
 
 #include "StockHerramientas.h"
-
+#include"Herramientas.h"
 class ArchivoStockHerramienta
 {
 private:
@@ -14,4 +14,5 @@ public:
     bool grabarRegistro(StockHerramientas);
     int contarRegistros();
     bool borrarRegistro();
+    bool reemplazarRegistroCompra(StockHerramientas reg, int posicionAReemplazar);
 };
