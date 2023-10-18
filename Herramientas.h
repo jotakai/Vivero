@@ -4,7 +4,7 @@
 class Herramienta
 {
 private:
-    int _id;
+    int _id=-1;
     int _codigoHerramienta;
     char _nombre[30];
     float _precio;

@@ -5,7 +5,7 @@ class StockPlanta{
     private :
         int _id;
         Planta _planta;
-        int _capacidad;//lo maximo que puede almacenar
+        int _capacidad=0;//lo maximo que puede almacenar
         bool _estado=1;
 
     public:

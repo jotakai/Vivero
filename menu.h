@@ -46,10 +46,10 @@ void CargarHerramienta();
 
 ///LimpiarDatos
 void LimpiarPlanta();
-// void LimpiarHerramienta();
+void LimpiarHerramienta();
 ///ListarDatos
 void ListarPlanta();
-//void ListarHerramienta();
+void ListarHerramienta();
 ///ContarRegistros
 
 

@@ -25,7 +25,7 @@ int opcion;
 
 while(true){
 
-
+system("cls");
 cout<<"opcion 1 ----> Movimientos Empresa"<<endl;
 cout<<"opcion 2 ----> Movimientos Persona"<<endl;
 cout<<"opcion 3 ----> Movimientos Duenio"<<endl;
@@ -1069,7 +1069,7 @@ void LimpiarDatos(int opcion){
     case 2:{
             system("cls");
             cout<<"OPCION 2"<<endl;
-            //LimpiarHerramienta();
+            LimpiarHerramienta();
             system("pause");
     }
         break;
@@ -1129,7 +1129,7 @@ while(true){
     case 2:{
             system("cls");
             cout<<"OPCION 2"<<endl;
-            CargarHerramienta();
+            ListarHerramienta();
             system("pause");
     }
         break;
@@ -1173,7 +1173,7 @@ ArchivoStockPlanta ClassAr("planta.dat");
 StockPlanta ClassP;
 
 cout<<"ingrese Cantidad de Registros"<<endl;
-cout<<"que quiere cargar"<<endl;
+cout<<"Cuantas quiere cargar"<<endl;
 cin>>tam;
 
 for(int i=0; i<tam; i++){
@@ -1190,11 +1190,15 @@ for(int i=0; i<tam; i++){
 void CargarHerramienta()
 {
     int tam;
+
 ArchivoStockHerramienta ClassAr("herramienta.dat");
 StockHerramientas ClassP;
 
+//ahi que hacer un leer registro, para asignarle a _id lo que tiene el ultimo registro del archivo
+
+
 cout<<"ingrese Cantidad de Registros"<<endl;
-cout<<"que quiere cargar"<<endl;
+cout<<"Cuanto quiere cargar"<<endl;
 cin>>tam;
 
 for(int i=0; i<tam; i++){
@@ -1216,17 +1220,33 @@ cout<<"no pudo borrrarlo"<<endl;
 
 }
 ///////////////////////////////////////////////////////////////////////////
-void ListarHerramienta(){
-    
+
+void LimpiarHerramienta(){
+ArchivoStockHerramienta ClassAr("herramienta.dat");
+
+if(!ClassAr.borrarRegistro()){
+cout<<"no pudo borrrarlo"<<endl;
 }
-///////////////////////////////////////////////////////////////////////////
-//void LimpiarHerramienta(){
-//    
-//}
+}
 ///////////////////////////////////////////////////////////////////////////
 void ListarPlanta(){
 ArchivoStockPlanta ClassAr("planta.dat");
 StockPlanta ClassP;
+
+int tam=0;
+
+tam=ClassAr.contarRegistros();
+
+for(int i=0; i<tam; i++){
+    ClassP = ClassAr.leerRegistro(i);
+    ClassP.MostrarRegistro();
+}
+
+}
+///////////////////////////////////////////////////////////////////////////
+void ListarHerramienta(){
+ArchivoStockHerramienta ClassAr("herramienta.dat");
+StockHerramientas ClassP;
 
 int tam=0;
 

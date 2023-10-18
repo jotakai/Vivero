@@ -4,9 +4,9 @@
 class StockHerramientas{
 
     private:
-        int _id;
+        int _id=0;
         Herramienta _herramienta;
-        int _capacidad;
+        int _capacidad=0;
         bool _estado=true;
     public:
         void setID(int id);

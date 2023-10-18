@@ -36,3 +36,10 @@ int ArchivoStockHerramienta::contarRegistros(){
     return tam/sizeof(StockHerramientas);
 }
 
+bool ArchivoStockHerramienta::borrarRegistro(){
+    FILE *p;
+    p=fopen(_nombre, "wb");
+    if(p==nullptr){ return false;}
+    fclose(p);
+    return true;
+}

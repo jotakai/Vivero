@@ -4,6 +4,8 @@ using namespace std;
 
 #include "Herramientas.h"
 #include"FuncionesGlobales.h"
+#include "ArchivoStockHerramienta.h"
+#include"StockHerramientas.h"
 
 void Herramienta:: setId(int id){
     _id=id;
@@ -31,8 +33,22 @@ float Herramienta::getPrecio() const{
 
 
 void Herramienta::Cargar(){
-    cout<<"Ingrese ID= ";
-    cin>>_id;
+
+///////////////////////////////////////////////////////////////
+////ahi que hacer un leer registro, para asignarle a _id lo que tiene el ultimo registro del archivo
+//
+//ArchivoStockHerramienta ClassAr("herramienta.dat");
+//StockHerramientas ClassP;
+//
+//int tamID;
+//
+//tamID=ClassAr.contarRegistros();
+//ClassP = ClassAr.leerRegistro(tamID);
+//_id=ClassP.getID();
+///////////////////////////////////////////////////////////////
+
+    _id=_id+1;
+    cout<<"ID= "<<_id<<endl;
     cout<<"Ingrese Nombre= ";
     cargarCadena(_nombre,30);
     cout<<"Ingrese Precio= ";
