@@ -8,7 +8,7 @@ StockHerramientas::StockHerramientas()
     int _id=0;
 }
 void StockHerramientas::setID(int id){
-    _id=id;
+  _id=id;
 }
 
 void StockHerramientas::setHerramienta(Herramienta herramienta){
@@ -38,16 +38,27 @@ int StockHerramientas::getCapacidad(){
 bool StockHerramientas::getEstado(){
     return _estado;
 }
-void StockHerramientas::CargarRegistro(int tam){
+void StockHerramientas::CargarRegistro(){
+    
+int capacidad=0;
+
+_id++;
 _herramienta.Cargar();
-setCapacidad(tam);
+cout<<"Cantidad  que ingresa de un mismo articulo: "<<endl;
+cin>>capacidad;
+setCapacidad(capacidad);
 _estado=1;
 }
 void StockHerramientas::MostrarRegistro(){
+    cout<<"ID: "<<getID();
 _herramienta.Mostrar();
 cout<<"Capacidad: "<<_capacidad<<endl;
 }
 
+void StockHerramientas::AumentarCapacidad(int cantidad)
+{
+      _capacidad=_capacidad+cantidad;
+}
 // void StockHerramientas::Mostrar(){
 
 // cout<<"Capacidad"<< _capacidad <<endl;

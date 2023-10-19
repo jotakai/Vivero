@@ -7,8 +7,8 @@ using namespace std;
 #include "ArchivoStockHerramienta.h"
 #include"StockHerramientas.h"
 
-void Herramienta:: setId(int id){
-    _id=id;
+void Herramienta:: setCodigoHerramienta(int codigoHerramienta){
+    _codigoHerramienta=codigoHerramienta;
 } 
 
 void Herramienta:: setNombre(const char*nombre){
@@ -19,8 +19,8 @@ void Herramienta::setPrecio(float precio){
     _precio=precio;
 }
 
-int Herramienta::getId() const{
-return _id;
+int Herramienta::getCodigoHeramienta() const{
+return _codigoHerramienta;
 }
 
 const char * Herramienta::getNombre() const{
@@ -47,8 +47,9 @@ void Herramienta::Cargar(){
 //_id=ClassP.getID();
 ///////////////////////////////////////////////////////////////
 
-    _id=_id+1;
-    cout<<"ID= "<<_id<<endl;
+  
+    cout<<"CODIGO HERRAMIENTA: "<<endl;
+    cin>>_codigoHerramienta;
     cout<<"Ingrese Nombre= ";
     cargarCadena(_nombre,30);
     cout<<"Ingrese Precio= ";
@@ -56,7 +57,7 @@ void Herramienta::Cargar(){
 }
 
 void Herramienta::Mostrar(){
-    cout<<"Su ID es: "<<_id<<endl;
+    cout<<"Su Codigo Herramienta es: "<<_codigoHerramienta<<endl;
     cout<<"Su Nombre es: "<<_nombre<<endl;
     cout<<"Su Precio es: "<<_precio<<endl;
 }
@@ -66,7 +67,7 @@ Herramienta::Herramienta(int id,const char* nombre,float precio,bool estado){
 }
 
 Herramienta::Herramienta(/* args */){
-    _id=_id+1;
+   // _id=_id+1;
 }
 
 Herramienta::~Herramienta(){

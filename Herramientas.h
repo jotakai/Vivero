@@ -4,7 +4,6 @@
 class Herramienta
 {
 private:
-    int _id=-1;
     int _codigoHerramienta;
     char _nombre[30];
     float _precio;
@@ -12,11 +11,11 @@ private:
     //<---- lo cambie a true ---- soy maxivill
 public:
 
-    void setId(int); 
+    void setCodigoHerramienta(int); 
     void setNombre(const char*); 
     void setPrecio(float);
     void setEstado(bool);
-    int getId() const;
+    int getCodigoHeramienta() const;
     const char *getNombre() const; 
     float getPrecio() const; 
     bool getEstado() const;

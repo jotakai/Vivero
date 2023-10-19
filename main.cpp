@@ -65,9 +65,11 @@ int main(){
 
 
    menuPrincipal();
+   
    system("cls");
 
-//pruebaArchivos();
+
+//pruebaArchivos();3
     return 0;
 }
 

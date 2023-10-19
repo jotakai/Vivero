@@ -1248,11 +1248,10 @@ for(int i=0; i<tam; i++){
 ///////////////////////////////////////////////////////////////////////////
 void CargarHerramienta()
 {
-    int tam;
+    int tam,ContadorRegistro=0;
 
 ArchivoStockHerramienta ClassAr("herramienta.dat");
 StockHerramientas ClassP;
-
 //ahi que hacer un leer registro, para asignarle a _id lo que tiene el ultimo registro del archivo
 
 
@@ -1262,7 +1261,7 @@ cin>>tam;
 
 for(int i=0; i<tam; i++){
     //stock
-    ClassP.CargarRegistro(tam);
+    ClassP.CargarRegistro();
     cout<<endl;
     if(ClassAr.grabarRegistro(ClassP)==false){
         cout<<"no pudo cargarse"<<endl;
@@ -1315,6 +1314,7 @@ for(int i=0; i<tam; i++){
     ClassP = ClassAr.leerRegistro(i);
     ClassP.MostrarRegistro();
     cout<<endl;
+    
 }
 
 }
@@ -1334,8 +1334,8 @@ void ModificarHerramienta(){
 
     if((posReg>0)&&(posReg<=max)){
         //ClassP = ClassAr.leerRegistro(posReg-1);
-        ClassP.CargarRegistro(posReg); //<---
-        ClassAr.reemplazarRegistroCompra(ClassP,posReg-1);
+        ClassP.CargarRegistro(); //<---
+        ClassAr.reemplazarRegistroCompra(ClassP,posReg);
 
     }else{
         cout<<"la posicion que ingreso no existe"<<endl;

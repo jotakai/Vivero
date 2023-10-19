@@ -56,7 +56,9 @@ AumentarCapacidad(cantidad);
 _estado=1;
 }
 
+
 void StockPlanta::MostrarRegistro(){
+    cout<<"ID: "<<getID();
 _planta.Mostrar();
 cout<<"Capacidad: "<<_capacidad<<endl;
 }
