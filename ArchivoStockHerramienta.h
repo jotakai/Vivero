@@ -14,5 +14,6 @@ public:
     bool grabarRegistro();
     int contarRegistros();
     bool borrarRegistro();
+    void MostrarRegistro();
     bool reemplazarRegistroCompra(Herramienta reg, int posicionAReemplazar);
 };

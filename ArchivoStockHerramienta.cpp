@@ -50,6 +50,11 @@ bool ArchivoStockHerramienta::borrarRegistro(){
     fclose(p);
     return true;
 }
+void ArchivoStockHerramienta:: MostrarRegistro()
+{
+    cout<<"Detalles Herramienta"<<endl;
+    h.Mostrar();
+}
 bool ArchivoStockHerramienta::reemplazarRegistroCompra(Herramienta reg, int posicionAReemplazar){
     FILE *p = fopen(_nombre, "rb+");
     if (p == NULL){return false;}

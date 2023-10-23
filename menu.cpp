@@ -1291,36 +1291,32 @@ cout<<"no pudo borrrarlo"<<endl;
 }
 }
 ///////////////////////////////////////////////////////////////////////////
-void ListarPlanta(){
-ArchivoStockPlanta ClassAr("planta.dat");
-Planta ClassP;
+// void ListarPlanta(){
+// ArchivoStockPlanta ClassAr("planta.dat");
+// Planta ClassP;
 
-int tam=0;
+// int tam=0;
 
-tam=ClassAr.contarRegistros();
+// tam=ClassAr.contarRegistros();
 
-for(int i=0; i<tam; i++){
-    ClassP = ClassAr.leerRegistro(i);
-    ClassP.Mostrar(); //MostrarRegistro
-}
+// for(int i=0; i<tam; i++){
+//     if(ClassAr.leerRegistro(i)){
+//     ClassAr.Mostrar(); //MostrarRegistro
+//     }
+// }
 
-}
+// }
 ///////////////////////////////////////////////////////////////////////////
 void ListarHerramienta(){
 ArchivoStockHerramienta ClassAr("herramienta.dat");
-Herramienta ClassP;
-
 int tam=0;
-
 tam=ClassAr.contarRegistros();
-
 for(int i=0; i<tam; i++){
    if(ClassAr.leerRegistro(i))
    {
-    ClassP.Mostrar(); //MostrarRegistro
+    ClassAr.MostrarRegistro(); //MostrarRegistro esta a
     cout<<endl;
    }
-    
 }
 
 }
