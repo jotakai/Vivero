@@ -6,19 +6,19 @@ using namespace std;
 
 #include"menu.h"
 #include "ArchivoStockPlanta.h"
-#include "StockPlanta.h"
+//#include "StockPlanta.h"
 //<----
 
- void pruebaArchivos() {
-    Planta P;
-    StockPlanta stockPlanta;
-    ArchivoStockPlanta ASP("prueba2.dat");
-    P.Cargar(); //<---
-    stockPlanta.setPlanta(P);
-    ASP.grabarRegistro(stockPlanta);
-    stockPlanta=ASP.leerRegistro(0);
-    stockPlanta.getPlanta().Mostrar();
- }
+ //void pruebaArchivos() {
+ //   Planta P;
+ //   StockPlanta stockPlanta;
+ //   ArchivoStockPlanta ASP("prueba2.dat");
+ //   P.Cargar(); //<---
+ //   stockPlanta.setPlanta(P);
+ //   ASP.grabarRegistro(stockPlanta);
+ //   stockPlanta=ASP.leerRegistro(0);
+ //   stockPlanta.getPlanta().Mostrar();
+ //}
 
 
 

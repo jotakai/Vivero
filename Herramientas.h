@@ -4,24 +4,28 @@
 class Herramienta
 {
 private:
-    int _codigoHerramienta;
+    int _idHerramienta=0;
     char _nombre[30];
     float _precio;
+    int _stock;
+    bool _estado;
     
     //<---- lo cambie a true ---- soy maxivill
 public:
 
-    void setCodigoHerramienta(int); 
+    void setIdHerramienta(int); 
     void setNombre(const char*); 
     void setPrecio(float);
     void setEstado(bool);
-    int getCodigoHeramienta() const;
+    void setStock(int);
+    int getStock();
+    int getIdHerramienta() const;
     const char *getNombre() const; 
     float getPrecio() const; 
     bool getEstado() const;
 
 
-    void Cargar();
+    void Cargar(int);
     void Mostrar();
 
 //constructores

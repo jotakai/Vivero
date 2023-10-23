@@ -1,5 +1,5 @@
 #pragma once
-#include "StockPlanta.h"
+#include "Planta.h"
 
 #include <cstring>
 class ArchivoStockPlanta
@@ -10,8 +10,8 @@ private:
 public:
     
     ArchivoStockPlanta(const char *n);
-    StockPlanta leerRegistro(int);
-    bool grabarRegistro(StockPlanta);
+    Planta leerRegistro(int);
+    bool grabarRegistro(Planta);
     int contarRegistros();
     bool borrarRegistro();
 };

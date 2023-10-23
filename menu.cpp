@@ -1063,7 +1063,7 @@ system("cls");
     case 2:{
             system("cls");
             cout<<"OPCION 2"<<endl;
-            ModificarHerramienta();
+           // ModificarHerramienta();
             system("pause");
     }
         break;
@@ -1228,7 +1228,7 @@ void CargarPlanta(){
 int tam,tamanioRegistro=0;
 ArchivoStockPlanta ClassAr("planta.dat");
 tamanioRegistro=ClassAr.contarRegistros();
-StockPlanta ClassP;
+Planta ClassP;
 
 cout<<"ingrese Cantidad de Registros"<<endl;
 cout<<"Cuantas quiere cargar"<<endl;
@@ -1237,7 +1237,7 @@ cin>>tam;
 for(int i=0; i<tam; i++){
     //stock
     
-    ClassP.CargarRegistro(tamanioRegistro);
+    ClassP.Cargar();
     cout<<endl;
     if(ClassAr.grabarRegistro(ClassP)==false){
         cout<<"no pudo cargarse"<<endl;
@@ -1248,12 +1248,11 @@ for(int i=0; i<tam; i++){
 ///////////////////////////////////////////////////////////////////////////
 void CargarHerramienta()
 {
-    int tam,ContadorRegistro=0;
+    int tam;
 
 ArchivoStockHerramienta ClassAr("herramienta.dat");
-StockHerramientas ClassP;
-//ahi que hacer un leer registro, para asignarle a _id lo que tiene el ultimo registro del archivo
 
+//ahi que hacer un leer registro, para asignarle a _id lo que tiene el ultimo registro del archivo
 
 cout<<"ingrese Cantidad de Registros"<<endl;
 cout<<"Cuanto quiere cargar"<<endl;
@@ -1261,13 +1260,18 @@ cin>>tam;
 
 for(int i=0; i<tam; i++){
     //stock
-    ClassP.CargarRegistro();
-    cout<<endl;
-    if(ClassAr.grabarRegistro(ClassP)==false){
+    ClassAr.CargarRegistro();
+    
+    if(ClassAr.grabarRegistro()==false){
         cout<<"no pudo cargarse"<<endl;
     }
+    
+
+
 }
+
 }
+
 ///////////////////////////////////////////////////////////////////////////
 void LimpiarPlanta(){
 ArchivoStockPlanta ClassAr("planta.dat");
@@ -1289,7 +1293,7 @@ cout<<"no pudo borrrarlo"<<endl;
 ///////////////////////////////////////////////////////////////////////////
 void ListarPlanta(){
 ArchivoStockPlanta ClassAr("planta.dat");
-StockPlanta ClassP;
+Planta ClassP;
 
 int tam=0;
 
@@ -1297,48 +1301,50 @@ tam=ClassAr.contarRegistros();
 
 for(int i=0; i<tam; i++){
     ClassP = ClassAr.leerRegistro(i);
-    ClassP.MostrarRegistro();
+    ClassP.Mostrar(); //MostrarRegistro
 }
 
 }
 ///////////////////////////////////////////////////////////////////////////
 void ListarHerramienta(){
 ArchivoStockHerramienta ClassAr("herramienta.dat");
-StockHerramientas ClassP;
+Herramienta ClassP;
 
 int tam=0;
 
 tam=ClassAr.contarRegistros();
 
 for(int i=0; i<tam; i++){
-    ClassP = ClassAr.leerRegistro(i);
-    ClassP.MostrarRegistro();
+   if(ClassAr.leerRegistro(i))
+   {
+    ClassP.Mostrar(); //MostrarRegistro
     cout<<endl;
+   }
     
 }
 
 }
 ///////////////////////////////////////////////////////////////////////////
-void ModificarHerramienta(){
+// void ModificarHerramienta(){
    
-    int max,posReg;
-    ArchivoStockHerramienta ClassAr("herramienta.dat");
-    StockHerramientas ClassP;
+//     int max,posReg;
+//     ArchivoStockHerramienta ClassAr("herramienta.dat");
+//     Herramienta ClassP;
 
-    //ClassH = ClassP.getHerramienta();
+//     //ClassH = ClassP.getHerramienta();
 
-    max=ClassAr.contarRegistros();
-   // cout<<"TOTAL DE REGISTROS= "<<max<<endl;
-    cout<<"ingrese Posicion del Registro que quieren cambiar"<<endl;
-    cin>>posReg;
+//     max=ClassAr.contarRegistros();
+//    // cout<<"TOTAL DE REGISTROS= "<<max<<endl;
+//     cout<<"ingrese Posicion del Registro que quieren cambiar"<<endl;
+//     cin>>posReg;
 
-    if((posReg>0)&&(posReg<=max)){
-        //ClassP = ClassAr.leerRegistro(posReg-1);
-        ClassP.CargarRegistro(); //<---
-        ClassAr.reemplazarRegistroCompra(ClassP,posReg);
+//     if((posReg>0)&&(posReg<=max)){
+//         //ClassP = ClassAr.leerRegistro(posReg-1);
+//         ClassP.Cargar(); // CargarRegistro
+//         ClassAr.reemplazarRegistroCompra(ClassP,posReg);
 
-    }else{
-        cout<<"la posicion que ingreso no existe"<<endl;
-    }
-}
+//     }else{
+//         cout<<"la posicion que ingreso no existe"<<endl;
+//     }
+// }
 ///////////////////////////////////////////////////////////////////////////

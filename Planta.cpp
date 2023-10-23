@@ -54,7 +54,20 @@ void Planta::setCodigoPlanta(int codigoPlanta){
 float Planta::getCodigoPlanta(){
     return _codigoPlanta;
 }
-
+int Planta::getStock()
+{
+    return _stock;
+}
+void Planta::setStock(int stock)
+{
+_stock=stock;
+}
+void Planta::setEstado(bool estado)
+{
+    _estado=estado;
+}
+bool Planta:: getEstado()
+{return _estado;}
 void Planta::Cargar(){
     string nombre,estacion;
     int codigoPlanta;
@@ -64,8 +77,6 @@ void Planta::Cargar(){
     cout<<"Ingrese Estacion = ";
     cin>>estacion;
     setEstacion(estacion);
-    cin>>codigoPlanta;
-    setCodigoPlanta(codigoPlanta);
 }
 
 void Planta::Mostrar(){

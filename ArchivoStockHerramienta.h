@@ -1,18 +1,18 @@
 #pragma once
 
-#include "StockHerramientas.h"
+
 #include"Herramientas.h"
 class ArchivoStockHerramienta
 {
 private:
     char _nombre[30];
-
+    Herramienta h;
 public:
-    void CargarRegistro();
+  void CargarRegistro();
     ArchivoStockHerramienta(const char *n);
-    StockHerramientas leerRegistro(int);
-    bool grabarRegistro(StockHerramientas);
+ bool leerRegistro(int);
+    bool grabarRegistro();
     int contarRegistros();
     bool borrarRegistro();
-    bool reemplazarRegistroCompra(StockHerramientas reg, int posicionAReemplazar);
+    bool reemplazarRegistroCompra(Herramienta reg, int posicionAReemplazar);
 };
