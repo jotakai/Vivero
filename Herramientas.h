@@ -4,7 +4,7 @@
 class Herramienta
 {
 private:
-    int _idHerramienta=0;
+    int _idHerramienta;
     char _nombre[30];
     float _precio;
     int _stock;
@@ -12,7 +12,6 @@ private:
     
     //<---- lo cambie a true ---- soy maxivill
 public:
-
     void setIdHerramienta(int); 
     void setNombre(const char*); 
     void setPrecio(float);
