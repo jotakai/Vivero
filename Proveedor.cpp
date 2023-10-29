@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#include "Persona.h"
+
 #include "Proveedor.h"
 #include"FuncionesGlobales.h"
 

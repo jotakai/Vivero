@@ -1,5 +1,5 @@
 #pragma once
-
+#include <cstring>
 class Articulo
 {
 private:
@@ -11,6 +11,7 @@ private:
     bool _estado;
 
 public:
+Articulo();
     /// SETERS
     void setNombre(const char *);
     void setCategoria(int);
@@ -26,5 +27,5 @@ public:
     int getStock()const;
     bool getEstado()const;
     void Mostrar();
-    void Cargar();
+    void Cargar(int);
 };

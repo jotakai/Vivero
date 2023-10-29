@@ -3,7 +3,6 @@
 
 using namespace std;
 
-#include "Persona.h"
 #include "Cliente.h"
 #include"FuncionesGlobales.h"
 
@@ -13,7 +12,7 @@ Cliente::Cliente(){
     _mail = "";
 }
 
-Cliente::Cliente(std::string nombre, std::string apellido, int edad, std::string direccion, std::string telefono, std::string mail) : Persona(nombre, apellido, edad){
+Cliente::Cliente(std::string nombre, std::string apellido, int edad, std::string direccion, std::string telefono, std::string mail) : Sujeto(nombre, apellido, edad){
     _direccion = direccion;
     _telefono = telefono;
     _mail = mail;
@@ -47,7 +46,7 @@ void Cliente::setMail(std::string mail){
 }
 
 void Cliente::Cargar(){
-    Persona::Cargar();
+    Sujeto::Cargar();
     cout<<"Ingrese Direccion = ";
     getline(cin,_direccion);
     cout<<"Ingrese Telefono = ";
@@ -58,7 +57,7 @@ void Cliente::Cargar(){
 }
 
 void Cliente::Mostrar(){
-    Persona::Mostrar();
+Sujeto::Mostrar();
     cout<<"Su Direccion es: "<<_direccion<<endl;
     cout<<"Su Telefono es: "<<_direccion<<endl;
     cout<<"Su Mail es: "<<_mail<<endl;

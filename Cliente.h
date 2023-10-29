@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
-#include "Persona.h"
+#include "Sujeto.h"
 
-class Cliente : public Persona
+class Cliente : public Sujeto
 {
     public:
         Cliente();

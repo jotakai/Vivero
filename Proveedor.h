@@ -1,8 +1,8 @@
 #pragma once
 
-#include"Persona.h"
+#include"Sujeto.h"
 
-class Proveedor : public Persona{
+class Proveedor : public Sujeto{
 
     private:
         char _id[50];

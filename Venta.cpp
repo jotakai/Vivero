@@ -1,47 +1,55 @@
 #include <iostream>
 
+#include <cstring>
 using namespace std;
-
 #include "Venta.h"
 
-int Venta::getid() const{
-    return _id;
+Venta::Venta(){
+    _idCliente = 0;
 }
 
-void Venta::setId(int id){
-    _id = id;
+int Venta::getIdCliente() const{
+    return _idCliente;
 }
 
-Fecha Venta::getFecha() const{
-    return _fechaVenta;
+void Venta::setIdCliente(int idCliente){
+    _idCliente = idCliente;
 }
 
-void Venta::setFecha(Fecha fechaventa){
-_fechaVenta=fechaventa;
+void Venta::cargar(int nroUltimoRegistro){
+ 
+     Movimiento::cargar(nroUltimoRegistro);
+    cout << "Ingrese el ID del cliente: ";
+    cin >> _idCliente;
+ 
 }
 
-void Venta::SetPlanta(Planta planta){
-    //_PlantaVenta
-    _PlantaVenta = planta;
+void Venta::mostrar(){
+   
+   Movimiento::mostrar();
+    cout << "ID de cliente: " << _idCliente << endl;
+   
 }
 
-Planta Venta::getPlanta(){
-    return _PlantaVenta;
-}
 
-void Venta::setCliente(Cliente cli){
-    //_ClienteVenta
-    _ClienteVenta = cli;
-}
+// void Venta::cargarVenta()
+// {
+//     cout<<"ID Articulo: ";
+//     cin>>_idArticulo;
+    
+//     Detalle d(id,idarticulo);
+//     detalle.guardar();
+// }
+// void Mostrar()
+// {
+//     cout<<"Atributos....";
+//     detalle.mostrar();
+// }
+// mostrarDetalle()
+// {
 
-Cliente Venta::getCliente(){
-    return _ClienteVenta;
-}
+//     leerArchivoDetalle.
+//     busqueda(idVenta);
+//     cout<<Articulos..;
 
-void Venta::setImporte(float importe){
-    _importe = importe;
-}
-
-float Venta::getImporte(){
-    return _importe;
-}   
+// }

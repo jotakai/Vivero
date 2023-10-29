@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#include "Persona.h"
+#include "Sujeto.h"
 #include "Planta.h"
 #include "Fecha.h"
 #include "Cliente.h"
@@ -349,6 +349,7 @@ void menuPlantasVentaEmpresa(int opcion)
         {
             system("cls");
             cout << "Opcion 4" << endl;
+                       
             system("pause");
         }
         break;

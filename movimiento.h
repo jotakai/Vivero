@@ -1,13 +1,14 @@
 #pragma once
 #include <iostream>
 #include <cstring>
+using namespace std;
 #include "articulo.h"
 #include "fecha.h"
 
 class Movimiento{
     private:
         int _id;
-        Articulo _idArticulo;
+       int _idArticulo;
         float _total;
         int _cantidad;
         int _categoria;
@@ -16,20 +17,11 @@ class Movimiento{
         bool _estado;
 
     public:
-        
-        Movimiento(int id, const Articulo& idArticulo, float total, int cantidad, int categoria, float precioUnitario, const Fecha& fechaEmision, bool estado) {
-            _id = id;
-            _idArticulo = idArticulo;
-            _total = total;
-            _cantidad = cantidad;
-            _categoria = categoria;
-            _precioUnitario = precioUnitario;
-            _fechaEmision = fechaEmision;
-            _estado = estado;
-        }
+        Movimiento();
+        Movimiento(int , int , float , int , int , float ,  Fecha , bool );
 
         int getId();
-        const Articulo& getIdArticulo();
+       int getIdArticulo();
         float getTotal();
         int getCantidad();
         int getCategoria();
@@ -39,7 +31,7 @@ class Movimiento{
 
         
         void setId(int id);
-        void setIdArticulo(const Articulo& idArticulo);
+        void setIdArticulo(int idArticulo);
         void setTotal(float total);
         void setCantidad(int cantidad);
         void setCategoria(int categoria);
@@ -47,6 +39,6 @@ class Movimiento{
         void setFechaEmision(const Fecha& fechaEmision);
         void setEstado(bool estado);
 
-        
+        void cargar(int );
         void mostrar();
 };
