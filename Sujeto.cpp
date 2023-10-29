@@ -3,50 +3,48 @@
 
 using namespace std;
 
-#include "Persona.h"
+#include "Sujeto.h"
 #include"FuncionesGlobales.h"
 
-Persona::Persona(){
-    _nombre = "";
-    _apellido = "";
-    _edad = 0;
+Sujeto::Sujeto(){
+    
 }
 
-Persona::Persona(std::string nombre, std::string apellido, int edad){
+Sujeto::Sujeto(std::string nombre, std::string apellido, int edad){
     _nombre = nombre;
     _apellido = apellido;
     _edad = edad;
 }
 
-Persona::~Persona(){
+Sujeto::~Sujeto(){
 
 }
 
-std::string Persona::getNombre(){
+std::string Sujeto::getNombre(){
     return _nombre;
 }
 
-std::string Persona::getApellido(){
+std::string Sujeto::getApellido(){
     return _apellido;
 }
 
-int Persona::getEdad(){
+int Sujeto::getEdad(){
     return _edad;
 }
 
-void Persona::setNombre(std::string nombre){
+void Sujeto::setNombre(std::string nombre){
     _nombre = nombre;
 }
 
-void Persona::setApellido(std::string apellido){
+void Sujeto::setApellido(std::string apellido){
     _apellido = apellido;
 }
 
-void Persona::setEdad(int edad){
+void Sujeto::setEdad(int edad){
     _edad = edad;
 }
 
-void Persona::Cargar(){
+void Sujeto::Cargar(){
     cout<<"Ingrese Nombre = ";
     getline(cin,_nombre);
     cout<<"Ingrese Apellido= ";
@@ -55,7 +53,7 @@ void Persona::Cargar(){
     cin>>_edad;
 }
 
-void Persona::Mostrar(){
+void Sujeto::Mostrar(){
     cout<<"Su Nombre es: "<<_nombre<<endl;
     cout<<"Su Apellido es: "<<_apellido<<endl;
     cout<<"Su Edad es: "<<_edad<<endl;

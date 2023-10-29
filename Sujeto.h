@@ -1,14 +1,14 @@
 #pragma once
 #include <string>
 
-class Persona{
+class Sujeto{
     
 public:
 
 //contructor predeterminado
-    Persona();
-    Persona(std::string nombre, std::string apellido, int edad);
-    ~Persona();
+   Sujeto();
+    Sujeto(std::string nombre, std::string apellido, int edad);
+    ~Sujeto();
 
     std::string getNombre();
     std::string getApellido();
