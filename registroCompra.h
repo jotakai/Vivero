@@ -19,7 +19,7 @@ public:
     void setId(int id) { _id = id; }
 
     const char *GetIdProveedor() const { return _idProveedor; }
-    void setIdProveedor(const char *idProveedor) { strcpy(_idProveedor, idProveedor); }
+    void setIdProveedor(const char *idProveedor);
 
     Fecha getFecha() const { return _Fecha; }
     void setFecha(const Fecha &Fecha) { _Fecha = Fecha; }
@@ -27,6 +27,5 @@ public:
     Modo_De_Pago GetModoDePago() const { return _ModoDePago; }
     void setModoDePago(const Modo_De_Pago &ModoDePago) { _ModoDePago = ModoDePago; }
 
-    void MostrarArticuloFactura(); //hacer
 
 };

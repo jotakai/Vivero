@@ -17,11 +17,16 @@ class Cliente : public Sujeto
         void setTelefono(std::string telefono);
         void setMail(std::string mail);
 
-        void Cargar();
-        void Mostrar();
+        Sujeto idSujeto() const { return _idSujeto; }
+        void setIdSujeto(const Sujeto &idSujeto) { _idSujeto = idSujeto; }
+
+        void Cargar(); //ACtualizarlo, agregar (Sujeto _idSujeto)
+        void Mostrar(); //ACtualizarlo, agregar (Sujeto _idSujeto)
+
 
     private:
         int _id;
+        Sujeto _idSujeto;
         std::string _direccion;
         std::string _telefono;
         std::string _mail;

@@ -29,6 +29,10 @@ const char *Direccion::getNumeroCalle (){
     return _numeroCalle;
 }
 
+const char *Direccion::getPais() const{
+    return _pais;
+}
+
 void Direccion:: setID (const char *id){
     strcpy(_id,id);
 }
@@ -53,6 +57,11 @@ void Direccion:: setNumeroCalle(const char *numeroCalle){
    strcpy(_numeroCalle,numeroCalle);
 }
 
+void Direccion:: setPais(const char * pais){
+    strcpy(_pais,pais);
+}
+
+
 void Direccion::Cargar(){
 
     cout<<"Ingrese ID= ";
@@ -76,17 +85,19 @@ void Direccion::Mostrar(){
     cout<<"Su Ciudad es: "<<_ciudad<<endl;
     cout<<"Su Provincia es: "<<_provincia<<endl;
     cout<<"Su Numero de Calle es: "<<_numeroCalle<<endl;
+    cout<<"SuPais es: "<<_pais<<endl;
 }
 
 Direccion::Direccion(){
 
 }
 
-Direccion::Direccion(const char *id,int codigoPostal,const char *calle,const char *ciudad,const char *provincia,const char *numeroCalle){
+Direccion::Direccion(const char *id,int codigoPostal,const char *calle,const char *ciudad,const char *provincia,const char *numeroCalle,const char *pais){
     setID(id);
     setCodigoPostal(codigoPostal);
     setCalle(calle);
     setCiudad(ciudad);
     setProvincia(provincia);
     setNumeroCalle(numeroCalle);
+    setPais(pais);
 }

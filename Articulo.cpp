@@ -27,10 +27,10 @@ float Articulo::getPrecio() const
     return _precio;
 }
 
-int Articulo::getCategoria() const { return _categoria; }
-void Articulo::setCategoria(int categoria)
+int Articulo::getTipoDeArticulo() const { return _TipoDeArticulo; }
+void Articulo::setTipoDeArticulo(int TipoDeArticulo)
 {
-    _categoria = categoria;
+    _TipoDeArticulo = TipoDeArticulo;
 }
 int Articulo::getStock() const
 {
@@ -53,8 +53,8 @@ void Articulo::Cargar(int nroUltimoRegistro)
     cargarCadena(_nombre, 30);
     cout << "Precio: ";
     cin >> _precio;
-    cout << "Categorria: ";
-    cin >> _categoria;
+    cout << "Tipo De Articulo: ";
+    cin >> _TipoDeArticulo;
     cout << "Stock: ";
     cin >> _stock;
     setEstado(1);
@@ -65,8 +65,8 @@ void Articulo::Mostrar()
     cout << "Nombre: "<<_nombre;
     cout << "Precio: ";
     cin >> _precio;
-    cout << "Categorria: ";
-    cin >> _categoria;
+    cout << "Tipo De Articulo: ";
+    cin >> _TipoDeArticulo;
     cout << "Stock: ";
     cin >> _stock;
     setEstado(1);
