@@ -4,7 +4,7 @@
 
 class Herramienta : public Articulo
 {
-    public:
+   public:
    void cargar(int);
     //<---- lo cambie a true ---- soy maxivill
 };
