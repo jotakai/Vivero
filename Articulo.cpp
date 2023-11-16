@@ -61,15 +61,14 @@ void Articulo::Cargar(int nroUltimoRegistro)
 }
 void Articulo::Mostrar()
 {
-     cout << "ID: " << _id << endl;
-    cout << "Nombre: "<<_nombre;
-    cout << "Precio: ";
-    cin >> _precio;
-    cout << "Tipo De Articulo: ";
-    cin >> _TipoDeArticulo;
-    cout << "Stock: ";
-    cin >> _stock;
+    cout << "ID: " << _id << endl;
+    cout << "Nombre: "<<_nombre<<endl;
+    cout << "Precio: "<<_precio<<endl;
+    cout << "Tipo De Articulo: "<<_TipoDeArticulo<<endl;
+    cout << "Stock: "<<_stock<<endl;
     setEstado(1);
+    cout << "ESTADO: : "<<_estado<<endl<<endl;
+
 }
 void Articulo::setNombre(const char *nombre)
 {

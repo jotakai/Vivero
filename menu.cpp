@@ -1355,6 +1355,7 @@ void CargarPlanta()
         // stock
 
         ClassP.Cargar(tamanioRegistro);
+        tamanioRegistro++;
         cout << endl;
         if (ClassAr.grabarRegistro(ClassP) == false)
         {
@@ -1411,6 +1412,7 @@ void LimpiarHerramienta()
 ///////////////////////////////////////////////////////////////////////////
 void ListarPlanta()
 {
+    cout<<"enserio pasa aqui?"<<endl;
     ArchivoStockPlanta ClassAr("planta.dat");
     Planta ClassP;
 
