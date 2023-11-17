@@ -1086,8 +1086,8 @@ void CargarDatos(int opcion)
     while (true)
     {
         system("cls");
-        cout << "Que quieres Cargar?" << endl
-             << endl;
+        cout << "Que quieres Cargar?" << endl<< endl;
+             
         cout << "Opcion 1 ---> Plantas" << endl;       // Crear funcion que carge plantas a un Archivos
         cout << "Opcion 2 ---> Herramientas" << endl;  // Crear funcion que carge Herramientas a un Archivos
         cout << "Opcion 3 ---> Agro Quimicos" << endl; // Crear funcion que carge Agro Quimicos a un Archivos
