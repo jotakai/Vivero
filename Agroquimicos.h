@@ -3,7 +3,7 @@
 class Agroquimicos{
 
     private:
-    int _tipoAgroquimico;
+    int _tipoAgroquimico; //1-Ecologico,2-Quimico
     public:
     void setTipoAgroquimico(int tipoAgroquimico);
     int getTipoAgroquimico();
